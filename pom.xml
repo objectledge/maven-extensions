@@ -11,6 +11,8 @@
 
   <modules>
     <module>jsc-maven-plugin</module>
+    <module>ckpackager-maven-plugin</module>
+    <module>ckpackager</module>
   </modules>
 
   <properties>
