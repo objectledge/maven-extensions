@@ -120,7 +120,9 @@
   </profiles>
   <modules>
     <module>plugins/javacc</module>
+    <module>plugins/jflex</module>
     <module>features/javacc</module>
+    <module>features/jflex</module>
     <module>site</module>
   </modules>
 </project>
