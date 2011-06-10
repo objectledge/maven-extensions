@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.objectledge.m2e.javacc-feature"
+      id="org.objectledge.m2e.javacc"
       label="javacc-maven-plugin lifecycle mapping"
       version="1.0.0.qualifier"
       provider-name="ObjectLedge.org"
-      plugin="org.eclipse.m2e.core">
+      plugin="org.objectledge.m2e.javacc">
 
    <description url="http://github.com/objectledge/m2e-extensions">
       m2e lifecycle mapping for javacc-maven-plugin http://mojo.codehaus.org/javacc-maven-plugin/
