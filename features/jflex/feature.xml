@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.objectledge.m2e.jflex-feature"
-      label="de.jflex:maven-jflex-plugin lifecycle mapping"
+      label="maven-jflex-plugin lifecycle mapping"
       version="1.0.0.qualifier"
       provider-name="ObjectLedge.org"
       plugin="org.eclipse.m2e.core">
