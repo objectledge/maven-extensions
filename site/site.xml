@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.objectledge.m2e.feature_1.0.0.qualifier.jar" id="org.objectledge.m2e.feature" version="1.0.0.qualifier">
+   <category-def name="org.objectledge.m2e" label="Project configurators for Maven plugins used by ObjectLedge"/>
+   <feature url="features/org.objectledge.m2e.javacc-feature_1.0.0.qualifier.jar" id="org.objectledge.m2e.javacc-feature" version="1.0.0.qualifier">
       <category name="org.objectledge.m2e"/>
    </feature>
-   <category-def name="org.objectledge.m2e" label="Project configurators for Maven plugins used by ObjectLedge"/>
+   <feature url="features/org.objectledge.m2e.jflex-feature_1.0.0.qualifier.jar" id="org.objectledge.m2e.jflex-feature" version="1.0.0.qualifier">
+      <category name="org.objectledge.m2e"/>
+   </feature>
 </site>
