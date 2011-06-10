@@ -22,7 +22,7 @@ http://www.eclipse.org/legal/epl-v10.html
    </license>
 
    <plugin
-         id="org.objectledge.m2e.javacc"
+         id="org.objectledge.m2e.jflex"
          download-size="0"
          install-size="0"
          version="0.0.0"
