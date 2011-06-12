@@ -15,25 +15,6 @@
   <build>
     <plugins>
       <plugin>
-        <artifactId>maven-scm-plugin</artifactId>
-        <version>1.5</version>
-        <executions>
-          <execution>
-            <id>fetch-source</id>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>checkout</goal>
-            </goals>
-            <configuration>
-              <connectionUrl>scm:svn:http://svn.ckeditor.com/CKPackager/trunk/_source/</connectionUrl>
-              <checkoutDirectory>target/remote-sources/js</checkoutDirectory>
-            </configuration>
-          </execution>
-        </executions>
-        <configuration>
-        </configuration>
-      </plugin>
-      <plugin>
         <groupId>org.objectledge.maven</groupId>
         <artifactId>jsc-maven-plugin</artifactId>
         <version>1.0.0-SNAPSHOT</version>
@@ -51,5 +32,37 @@
       </plugin>
     </plugins>
   </build>
-
+  <profiles>
+    <profile>
+      <id>remote-source-needed</id>
+      <activation>
+        <file>
+          <missing>${basedir}/target/remote-sources/js</missing>
+        </file>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-scm-plugin</artifactId>
+            <version>1.5</version>
+            <executions>
+              <execution>
+                <id>fetch-source</id>
+                <phase>generate-sources</phase>
+                <goals>
+                  <goal>checkout</goal>
+                </goals>
+                <configuration>
+                  <connectionUrl>scm:svn:http://svn.ckeditor.com/CKPackager/trunk/_source/</connectionUrl>
+                  <checkoutDirectory>target/remote-sources/js</checkoutDirectory>
+                </configuration>
+              </execution>
+            </executions>
+            <configuration>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>
