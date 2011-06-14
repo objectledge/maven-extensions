@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <category-def name="org.objectledge.m2e" label="Project configurators for Maven plugins used by ObjectLedge"/>
    <feature url="features/org.objectledge.m2e.javacc_1.0.0.qualifier.jar" id="org.objectledge.m2e.javacc" version="1.0.0.qualifier">
       <category name="org.objectledge.m2e"/>
    </feature>
@@ -10,4 +9,8 @@
    <feature url="features/org.objectledge.m2e.scm_1.0.0.qualifier.jar" id="org.objectledge.m2e.scm" version="1.0.0.qualifier">
       <category name="org.objectledge.m2e"/>
    </feature>
+   <feature url="features/org.objectledge.m2e.jsc_1.0.0.qualifier.jar" id="org.objectledge.m2e.jsc" version="1.0.0.qualifier">
+      <category name="org.objectledge.m2e"/>
+   </feature>
+   <category-def name="org.objectledge.m2e" label="Project configurators for Maven plugins used by ObjectLedge"/>
 </site>
