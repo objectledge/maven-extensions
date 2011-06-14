@@ -10,6 +10,11 @@
   <description>A parent project for Maven extensions provided by objectledge.org</description>
   <url>http://objectledge.org/confluence/display/TOOLS</url>
 
+  <modules>
+    <module>plugins</module>
+    <module>connectors</module>
+  </modules>
+
   <organization>
     <name>objectledge.org</name>
     <url>http://objectledge.org</url>
@@ -55,11 +60,6 @@
       <url>http://nexus.objectledge.org/nexus/content/repositories/m2snapshots</url>
     </snapshotRepository>
   </distributionManagement>
-
-  <modules>
-    <module>plugins</module>
-    <module>connectors</module>
-  </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
