@@ -1,4 +1,4 @@
-package org.objectledge.m2e.javacc;
+package org.objectledge.maven.connectors.javacc;
 
 import java.io.File;
 

@@ -12,7 +12,7 @@
       </pluginExecutionFilter>
       <action>
         <configurator>
-          <id>org.objectledge.m2e.javacc</id>
+          <id>org.objectledge.maven.connectors.javacc</id>
         </configurator>
       </action>
     </pluginExecution>
@@ -27,7 +27,7 @@
       </pluginExecutionFilter>
       <action>
         <configurator>
-          <id>org.objectledge.m2e.jjtree-javacc</id>
+          <id>org.objectledge.maven.connectors.jjtree-javacc</id>
         </configurator>
       </action>
     </pluginExecution>

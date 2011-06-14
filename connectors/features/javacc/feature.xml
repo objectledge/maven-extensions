@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.objectledge.m2e.javacc"
+      id="org.objectledge.maven.connectors.javacc"
       label="javacc-maven-plugin lifecycle mapping"
       version="1.0.0.qualifier"
       provider-name="ObjectLedge.org"
-      plugin="org.objectledge.m2e.javacc">
+      plugin="org.objectledge.maven.connectors.javacc">
 
    <description url="http://github.com/objectledge/m2e-extensions">
       m2e lifecycle mapping for javacc-maven-plugin http://mojo.codehaus.org/javacc-maven-plugin/
@@ -22,7 +22,7 @@ http://www.eclipse.org/legal/epl-v10.html
    </license>
 
    <plugin
-         id="org.objectledge.m2e.javacc"
+         id="org.objectledge.maven.connectors.javacc"
          download-size="0"
          install-size="0"
          version="0.0.0"

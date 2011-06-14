@@ -1,4 +1,4 @@
-package org.objectledge.m2e.jflex;
+package org.objectledge.maven.connectors.jflex;
 
 import java.io.File;
 import java.util.Set;

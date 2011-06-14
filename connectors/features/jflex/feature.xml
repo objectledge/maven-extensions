@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.objectledge.m2e.jflex"
+      id="org.objectledge.maven.connectors.jflex"
       label="maven-jflex-plugin lifecycle mapping"
       version="1.0.0.qualifier"
       provider-name="ObjectLedge.org"
-      plugin="org.objectledge.m2e.jflex">
+      plugin="org.objectledge.maven.connectors.jflex">
 
    <description url="http://github.com/objectledge/m2e-extensions">
       m2e lifecycle mapping for maven-jflex-plugin http://jflex.sourceforge.net/maven-jflex-plugin/
@@ -22,7 +22,7 @@ http://www.eclipse.org/legal/epl-v10.html
    </license>
 
    <plugin
-         id="org.objectledge.m2e.jflex"
+         id="org.objectledge.maven.connectors.jflex"
          download-size="0"
          install-size="0"
          version="0.0.0"

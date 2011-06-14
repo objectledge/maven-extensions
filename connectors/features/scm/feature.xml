@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.objectledge.m2e.scm"
+      id="org.objectledge.maven.connectors.scm"
       label="maven-scm-plugin lifecycle mapping"
       version="1.0.0.qualifier"
       provider-name="ObjectLedge.org"
-      plugin="org.objectledge.m2e.scm">
+      plugin="org.objectledge.maven.connectors.scm">
 
    <description url="http://github.com/objectledge/m2e-extensions">
       m2e lifecycle mapping for maven-scm-plugin
@@ -22,7 +22,7 @@ http://www.eclipse.org/legal/epl-v10.html
    </license>
 
    <plugin
-         id="org.objectledge.m2e.scm"
+         id="org.objectledge.maven.connectors.scm"
          download-size="0"
          install-size="0"
          version="0.0.0"

@@ -1,4 +1,4 @@
-package org.objectledge.m2e.scm;
+package org.objectledge.maven.connectors.scm;
 
 import java.io.File;
 import java.util.Set;

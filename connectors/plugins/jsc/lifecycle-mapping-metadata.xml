@@ -3,16 +3,16 @@
   <pluginExecutions>
     <pluginExecution>
       <pluginExecutionFilter>
-        <groupId>org.objectledge.maven</groupId>
+        <groupId>org.objectledge.maven.plugins</groupId>
         <artifactId>jsc-maven-plugin</artifactId>
-        <versionRange>[1.0,)</versionRange>
+        <versionRange>[1.0.0-SNAPSHOT,)</versionRange>
         <goals>
           <goal>compile</goal>
         </goals>
       </pluginExecutionFilter>
       <action>
         <configurator>
-          <id>org.objectledge.m2e.jsc</id>
+          <id>org.objectledge.maven.connectors.jsc</id>
         </configurator>
       </action>
     </pluginExecution>

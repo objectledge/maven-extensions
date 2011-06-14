@@ -1,4 +1,4 @@
-package org.objectledge.m2e.jflex;
+package org.objectledge.maven.connectors.jflex;
 
 import org.apache.maven.plugin.MojoExecution;
 import org.eclipse.m2e.core.lifecyclemapping.model.IPluginExecutionMetadata;

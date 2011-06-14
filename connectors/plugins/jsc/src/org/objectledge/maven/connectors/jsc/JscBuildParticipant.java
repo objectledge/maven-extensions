@@ -1,4 +1,4 @@
-package org.objectledge.m2e.jsc;
+package org.objectledge.maven.connectors.jsc;
 
 import java.io.File;
 import java.util.Set;

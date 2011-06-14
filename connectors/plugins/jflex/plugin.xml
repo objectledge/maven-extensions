@@ -4,8 +4,8 @@
    <extension
          point="org.eclipse.m2e.core.projectConfigurators">
       <configurator
-            class="org.objectledge.m2e.jflex.JFlexProjectConfigurator"
-            id="org.objectledge.m2e.jflex"
+            class="org.objectledge.maven.connectors.jflex.JFlexProjectConfigurator"
+            id="org.objectledge.maven.connectors.jflex"
             name="JFlex Project Configurator">
       </configurator>
    </extension>

@@ -12,7 +12,7 @@
       </pluginExecutionFilter>
       <action>
         <configurator>
-          <id>org.objectledge.m2e.jflex</id>
+          <id>org.objectledge.maven.connectors.jflex</id>
         </configurator>
       </action>
     </pluginExecution>

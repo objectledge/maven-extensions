@@ -14,7 +14,7 @@
       </pluginExecutionFilter>
       <action>
         <configurator>
-          <id>org.objectledge.m2e.scm</id>
+          <id>org.objectledge.maven.connectors.scm</id>
         </configurator>
       </action>
     </pluginExecution>

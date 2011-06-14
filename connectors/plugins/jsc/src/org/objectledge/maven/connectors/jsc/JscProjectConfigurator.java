@@ -1,4 +1,4 @@
-package org.objectledge.m2e.jsc;
+package org.objectledge.maven.connectors.jsc;
 
 import org.apache.maven.plugin.MojoExecution;
 import org.eclipse.m2e.core.lifecyclemapping.model.IPluginExecutionMetadata;

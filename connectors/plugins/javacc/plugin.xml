@@ -4,16 +4,16 @@
    <extension
          point="org.eclipse.m2e.core.projectConfigurators">
       <configurator
-            class="org.objectledge.m2e.javacc.JavaCCProjectConfigurator"
-            id="org.objectledge.m2e.javacc"
+            class="org.objectledge.maven.connectors.javacc.JavaCCProjectConfigurator"
+            id="org.objectledge.maven.connectors.javacc"
             name="JavaCC Project Configurator">
       </configurator>
    </extension>
    <extension
          point="org.eclipse.m2e.core.projectConfigurators">
       <configurator
-            class="org.objectledge.m2e.javacc.JJTreeJavaCCProjectConfigurator"
-            id="org.objectledge.m2e.jjtree-javacc"
+            class="org.objectledge.maven.connectors.javacc.JJTreeJavaCCProjectConfigurator"
+            id="org.objectledge.maven.connectors.jjtree-javacc"
             name="JJTree Project Configurator">          
       </configurator>              
    </extension>

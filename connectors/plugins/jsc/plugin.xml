@@ -4,8 +4,8 @@
    <extension
          point="org.eclipse.m2e.core.projectConfigurators">
       <configurator
-            class="org.objectledge.m2e.jsc.JscProjectConfigurator"
-            id="org.objectledge.m2e.jsc"
+            class="org.objectledge.maven.connectors.jsc.JscProjectConfigurator"
+            id="org.objectledge.maven.connectors.jsc"
             name="JSC Project Configurator">
       </configurator>
    </extension>

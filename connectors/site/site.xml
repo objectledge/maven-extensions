@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.objectledge.m2e.javacc_1.0.0.qualifier.jar" id="org.objectledge.m2e.javacc" version="1.0.0.qualifier">
-      <category name="org.objectledge.m2e"/>
+   <feature url="features/org.objectledge.maven.connectors.javacc_1.0.0.qualifier.jar" id="org.objectledge.maven.connectors.javacc" version="1.0.0.qualifier">
+      <category name="org.objectledge.maven.connectors"/>
    </feature>
-   <feature url="features/org.objectledge.m2e.jflex_1.0.0.qualifier.jar" id="org.objectledge.m2e.jflex" version="1.0.0.qualifier">
-      <category name="org.objectledge.m2e"/>
+   <feature url="features/org.objectledge.maven.connectors.jflex_1.0.0.qualifier.jar" id="org.objectledge.maven.connectors.jflex" version="1.0.0.qualifier">
+      <category name="org.objectledge.maven.connectors"/>
    </feature>
-   <feature url="features/org.objectledge.m2e.scm_1.0.0.qualifier.jar" id="org.objectledge.m2e.scm" version="1.0.0.qualifier">
-      <category name="org.objectledge.m2e"/>
+   <feature url="features/org.objectledge.maven.connectors.scm_1.0.0.qualifier.jar" id="org.objectledge.maven.connectors.scm" version="1.0.0.qualifier">
+      <category name="org.objectledge.maven.connectors"/>
    </feature>
-   <feature url="features/org.objectledge.m2e.jsc_1.0.0.qualifier.jar" id="org.objectledge.m2e.jsc" version="1.0.0.qualifier">
-      <category name="org.objectledge.m2e"/>
+   <feature url="features/org.objectledge.maven.connectors.jsc_1.0.0.qualifier.jar" id="org.objectledge.maven.connectors.jsc" version="1.0.0.qualifier">
+      <category name="org.objectledge.maven.connectors"/>
    </feature>
-   <category-def name="org.objectledge.m2e" label="Project configurators for Maven plugins used by ObjectLedge"/>
+   <category-def name="org.objectledge.maven.connectors" label="Project configurators for Maven plugins used by ObjectLedge"/>
 </site>

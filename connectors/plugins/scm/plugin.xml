@@ -4,8 +4,8 @@
    <extension
          point="org.eclipse.m2e.core.projectConfigurators">
       <configurator
-            class="org.objectledge.m2e.scm.ScmProjectConfigurator"
-            id="org.objectledge.m2e.scm"
+            class="org.objectledge.maven.connectors.scm.ScmProjectConfigurator"
+            id="org.objectledge.maven.connectors.scm"
             name="SCM Project Configurator">
       </configurator>
    </extension>
