@@ -7,7 +7,7 @@
   <packaging>pom</packaging>
 
   <name>ObjectLedge Maven extensions.</name>
-  <description>A parent project for Maven extensions provided by objectledge.org</description>
+  <description>Parent project for Maven extensions provided by objectledge.org</description>
   <url>http://objectledge.org/confluence/display/TOOLS</url>
 
   <modules>
