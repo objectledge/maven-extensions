@@ -1,12 +1,20 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <parent>
-    <artifactId>parent</artifactId>
-    <groupId>org.objectledge.m2e</groupId>
-    <version>1.0.0-SNAPSHOT</version>
+    <artifactId>connectors</artifactId>
+    <groupId>org.objectledge.maven</groupId>
+    <version>1-SNAPSHOT</version>
     <relativePath>../..</relativePath>
   </parent>
+ 
+  <groupId>org.objectledge.maven.connectors</groupId>
   <artifactId>scm-plugin</artifactId>
-  <name>maven-scm-plugin lifecycle mapping</name>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
+
+  <name>Maven SCM connector eclipse plugin</name>
+  <description>An eclipse plugin providing lifecycle mapping for maven-scm-plugin.</description>
+  <url>http://objectledge.org/confluence/display/TOOLS/maven-scm-plugin+connector</url>
 </project>
