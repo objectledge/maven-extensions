@@ -55,4 +55,9 @@
       <url>http://nexus.objectledge.org/nexus/content/repositories/m2snapshots</url>
     </snapshotRepository>
   </distributionManagement>
+  
+  <modules>
+    <module>plugins</module>
+    <module>connectors</module>
+  </modules>
 </project>
