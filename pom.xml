@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <groupId>org.objectledge</groupId>
+  <artifactId>maven</artifactId>
+  <version>1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>ObjectLedge Maven extensions.</name>
+  <description>A parent project for Maven extensions provided by objectledge.org</description>
+  <url>http://objectledge.org/confluence/display/TOOLS</url>
+
+  <organization>
+    <name>objectledge.org</name>
+    <url>http://objectledge.org</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>EPL-1.0</name>
+      <url>http://www.eclipse.org/legal/epl-v10.html</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>rkrzewski</id>
+      <email>rafal.krzewski@objectledge.org</email>
+      <organization>Caltha - Krzewski, Mach, Potempski Sp. J</organization>
+      <organizationUrl>http://caltha.pl</organizationUrl>
+      <timezone>+1</timezone>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/objectledge/maven-extensions.git</connection>
+    <url>https://github.com/objectledge/maven-extensions</url>
+  </scm>
+  <issueManagement>
+    <system>jira</system>
+    <url>http://objectledge.org/jira/browse/TOOLS</url>
+  </issueManagement>
+  <ciManagement>
+    <system>bamboo</system>
+    <url>http://objectledge.org/bamboo/browse/TOOLS-MAVEN</url>
+  </ciManagement>
+  <distributionManagement>
+    <repository>
+      <id>nexus.objectledge.org</id>
+      <name>ObjectLedge releases Nexus repository</name>
+      <url>http://nexus.objectledge.org/nexus/content/repositories/m2releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>nexus.objectledge.org</id>
+      <name>ObjectLedge snapshots Nexus repository</name>
+      <url>http://nexus.objectledge.org/nexus/content/repositories/m2snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>
