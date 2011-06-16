@@ -34,7 +34,7 @@ public class CKPackagerMojo extends AbstractMojo {
 			String userDir = System.getProperty("user.dir");
 			try {
 				System.setProperty("user.dir", packScript.getParent());
-				ckpackager.ckpackager.main(new String[] { packScript
+				ckpackager.launcher.main(new String[] { packScript
 						.getAbsolutePath() });
 			} catch (RuntimeException e) {
 				throw new MojoExecutionException(
