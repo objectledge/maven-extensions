@@ -1,5 +1,7 @@
 package org.objectledge.maven.ckpackager;
 
+import java.io.File;
+
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
@@ -20,9 +22,30 @@ public class CKPackagerMojo extends AbstractMojo {
 	 * @parameter expression="${basedir}/src/main/resources/ckeditor.pack"
 	 * @required
 	 */
-	private String packScript;
+	private File packScript;
 
 	public void execute() throws MojoExecutionException, MojoFailureException {
-		com.ckeditor.ckpackager.ckpackager.main(new String[] { packScript });
+
+		if (packScript.exists() && packScript.isFile() && packScript.canRead()) {
+			getLog().info(
+					"Processing packaging script "
+							+ packScript.getAbsolutePath());
+
+			String userDir = System.getProperty("user.dir");
+			try {
+				System.setProperty("user.dir", packScript.getParent());
+				ckpackager.ckpackager.main(new String[] { packScript
+						.getAbsolutePath() });
+			} catch (RuntimeException e) {
+				throw new MojoExecutionException(
+						"ckpackager invocation failed", e);
+			} finally {
+				System.setProperty("user.dir", userDir);
+			}
+		} else {
+			throw new MojoFailureException(packScript.getAbsolutePath()
+					+ " does not exist or is unreadable");
+		}
+
 	}
 }
