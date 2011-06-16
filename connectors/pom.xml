@@ -3,13 +3,13 @@
   <modelVersion>4.0.0</modelVersion>
   
   <parent>
-    <groupId>org.objectledge</groupId>
-    <artifactId>maven</artifactId>
+  <groupId>org.objectledge.maven</groupId>
+  <artifactId>parent</artifactId>
     <version>1-SNAPSHOT</version>
   </parent>
   
-  <groupId>org.objectledge.maven</groupId>
-  <artifactId>connectors</artifactId>
+  <groupId>org.objectledge.maven.connectors</groupId>
+  <artifactId>parent</artifactId>
   <version>1-SNAPSHOT</version>
   <packaging>pom</packaging>
 

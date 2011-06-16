@@ -4,21 +4,21 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.objectledge.maven.plugins</groupId>
-    <artifactId>jsc-test-parent</artifactId>
+    <groupId>org.objectledge.maven.plugins.jsc.test</groupId>
+    <artifactId>parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>jsc-test</artifactId>
+  <artifactId>test</artifactId>
   <packaging>jar</packaging>
 
   <name>Test module</name>
 
   <dependencies>
     <dependency>
-      <groupId>org.objectledge.maven.plugins</groupId>
-      <artifactId>jsc-test-interface</artifactId>
+      <groupId>org.objectledge.maven.plugins.jsc.test</groupId>
+      <artifactId>interface</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
@@ -54,8 +54,8 @@
         </configuration>
         <dependencies>
           <dependency>
-            <groupId>org.objectledge.maven.plugins</groupId>
-            <artifactId>jsc-test-interface</artifactId>
+            <groupId>org.objectledge.maven.plugins.jsc.test</groupId>
+            <artifactId>interface</artifactId>
             <version>${project.version}</version>
           </dependency>
         </dependencies>

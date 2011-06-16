@@ -3,13 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <artifactId>connectors</artifactId>
-    <groupId>org.objectledge.maven</groupId>
+    <groupId>org.objectledge.maven.connectors</groupId>
+    <artifactId>parent</artifactId>
     <version>1-SNAPSHOT</version>
     <relativePath>../..</relativePath>
   </parent>
  
-  <groupId>org.objectledge.maven.connectors</groupId>
   <artifactId>javacc-feature</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>eclipse-feature</packaging>
