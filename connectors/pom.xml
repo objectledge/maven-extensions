@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  
+
   <parent>
-  <groupId>org.objectledge.maven</groupId>
-  <artifactId>parent</artifactId>
+    <groupId>org.objectledge.maven</groupId>
+    <artifactId>parent</artifactId>
     <version>1-SNAPSHOT</version>
   </parent>
-  
+
   <groupId>org.objectledge.maven.connectors</groupId>
   <artifactId>parent</artifactId>
   <version>1-SNAPSHOT</version>
@@ -28,11 +28,11 @@
     <module>features/jsc</module>
     <module>site</module>
   </modules>
-  
+
   <properties>
     <tycho-version>0.13.0-SNAPSHOT</tycho-version>
   </properties>
-  
+
   <repositories>
     <repository>
       <id>m2e</id>
@@ -45,6 +45,7 @@
       <url>http://download.eclipse.org/releases/helios</url>
     </repository>
   </repositories>
+  
   <pluginRepositories>
     <pluginRepository>
       <id>sonatype-public</id>
@@ -57,7 +58,7 @@
       </releases>
     </pluginRepository>
   </pluginRepositories>
-  
+
   <build>
     <plugins>
       <plugin>
@@ -74,6 +75,12 @@
           <resolver>p2</resolver>
           <pomDependencies>consider</pomDependencies>
           <ignoreTychoRepositories>true</ignoreTychoRepositories>
+          <target>
+            <groupId>org.objectledge.maven.connectors</groupId>
+            <artifactId>target-platform</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <classifier>e36-m2e100</classifier>
+          </target>
         </configuration>
       </plugin>
     </plugins>
@@ -129,7 +136,7 @@
       </plugins>
     </pluginManagement>
   </build>
-  
+
   <profiles>
     <profile>
       <id>sun-jvm</id>
@@ -144,5 +151,5 @@
       </properties>
     </profile>
   </profiles>
-  
+
 </project>
