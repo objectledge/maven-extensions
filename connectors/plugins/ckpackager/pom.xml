@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.objectledge.maven.connectors</groupId>
+    <artifactId>parent</artifactId>
+    <version>1-SNAPSHOT</version>
+    <relativePath>../..</relativePath>
+  </parent>
+
+  <artifactId>ckpackager-plugin</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>eclipse-plugin</packaging>
+
+  <name>CKPackager connector eclipse plugin</name>
+  <description>An eclipse plugin providing lifecycle mapping for ckpackager-maven-plugin.</description>
+  <url>http://objectledge.org/confluence/display/TOOLS/ckpackager-maven-plugin+connector</url>
+
+  <dependencies>
+    <dependency>
+      <groupId>net.sf.json-lib</groupId>
+      <artifactId>json-lib</artifactId>
+      <version>2.4</version>
+      <classifier>jdk15</classifier>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-packaging-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>package-plugin</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+           <packageSources>false</packageSources>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
