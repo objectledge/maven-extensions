@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  
+
   <parent>
     <groupId>org.objectledge.maven.plugins</groupId>
     <artifactId>parent</artifactId>
@@ -12,7 +12,7 @@
   <artifactId>ckpackager-maven-plugin</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
-  
+
   <name>CKPackager Maven plugin</name>
   <description>Maven plugin for packaging custom CKEditor distribution.</description>
   <url>http://objectledge.org/confluence/display/TOOLS/ckpackager-maven-plugin</url>
@@ -34,5 +34,13 @@
       <version>1.7R2</version>
     </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-invoker-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>

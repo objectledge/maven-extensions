@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.objectledge.maven.plugins</groupId>
+    <artifactId>parent</artifactId>
+    <version>1-SNAPSHOT</version>
+    <relativePath>../../../..</relativePath>
+  </parent>
+
+  <groupId>org.objectledge.maven.plugins.ckpackager.test</groupId>
+  <artifactId>test</artifactId>
+  <packaging>jar</packaging>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.objectledge.maven.plugins</groupId>
+        <artifactId>ckpackager-maven-plugin</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>package</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <packScript>src/ckpackager/basic.pack</packScript>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>remote-source-needed</id>
+      <activation>
+        <file>
+          <missing>src/ckpackager</missing>
+        </file>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-scm-plugin</artifactId>
+            <version>1.5</version>
+            <executions>
+              <execution>
+                <id>fetch-source</id>
+                <phase>generate-sources</phase>
+                <goals>
+                  <goal>checkout</goal>
+                </goals>
+                <configuration>
+                  <connectionUrl>scm:svn:http://svn.fckeditor.net/CKPackager/trunk/_samples/basic/</connectionUrl>
+                  <checkoutDirectory>src/ckpackager</checkoutDirectory>
+                </configuration>
+              </execution>
+            </executions>
+            <configuration>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+</project> 
+ 
