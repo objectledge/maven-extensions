@@ -12,5 +12,8 @@
    <feature url="features/org.objectledge.maven.connectors.jsc_1.0.0.qualifier.jar" id="org.objectledge.maven.connectors.jsc" version="1.0.0.qualifier">
       <category name="org.objectledge.maven.connectors"/>
    </feature>
+   <feature url="features/org.objectledge.maven.connectors.ckpackager_1.0.0.qualifier.jar" id="org.objectledge.maven.connectors.ckpackager" version="1.0.0.qualifier">
+      <category name="org.objectledge.maven.connectors"/>
+   </feature>
    <category-def name="org.objectledge.maven.connectors" label="Project configurators for Maven plugins used by ObjectLedge"/>
 </site>
