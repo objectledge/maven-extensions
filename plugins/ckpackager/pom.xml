@@ -34,7 +34,7 @@
               <goal>compile</goal>
             </goals>
             <configuration>
-              <sourceDirectory>src/js/includes</sourceDirectory>
+              <sourceDirectory>src/orig/js/ckpackager/includes</sourceDirectory>
               <packageName>ckpackager.includes</packageName>
             </configuration>
           </execution>
@@ -44,7 +44,17 @@
               <goal>compile</goal>
             </goals>
             <configuration>
-              <sourceDirectory>src/js</sourceDirectory>
+              <sourceDirectory>src/orig/js/ckpackager</sourceDirectory>
+              <packageName>ckpackager</packageName>
+            </configuration>
+          </execution>
+          <execution>
+            <id>launcher</id>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+            <configuration>
+              <sourceDirectory>src/main/js/ckpackager</sourceDirectory>
               <packageName>ckpackager</packageName>
             </configuration>
           </execution>
@@ -58,7 +68,7 @@
       <id>remote-source-needed</id>
       <activation>
         <file>
-          <missing>src/js</missing>
+          <missing>src/orig/js/ckpackager/ckpackager.js</missing>
         </file>
       </activation>
       <build>
@@ -75,7 +85,7 @@
                 </goals>
                 <configuration>
                   <connectionUrl>scm:svn:http://svn.ckeditor.com/CKPackager/trunk/_source/</connectionUrl>
-                  <checkoutDirectory>src/js</checkoutDirectory>
+                  <checkoutDirectory>src/orig/js/ckpackager</checkoutDirectory>
                 </configuration>
               </execution>
             </executions>
