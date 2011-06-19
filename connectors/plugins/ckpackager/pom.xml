@@ -17,32 +17,121 @@
   <description>An eclipse plugin providing lifecycle mapping for ckpackager-maven-plugin.</description>
   <url>http://objectledge.org/confluence/display/TOOLS/ckpackager-maven-plugin+connector</url>
 
-  <dependencies>
-    <dependency>
-      <groupId>net.sf.json-lib</groupId>
-      <artifactId>json-lib</artifactId>
-      <version>2.4</version>
-      <classifier>jdk15</classifier>
-    </dependency>
-  </dependencies>
+
+  <profiles>
+    <profile>
+      <id>update-dependencies</id>
+
+      <dependencies>
+        <dependency>
+          <groupId>net.sf.json-lib</groupId>
+          <artifactId>json-lib</artifactId>
+          <version>2.4</version>
+          <classifier>jdk15</classifier>
+        </dependency>
+      </dependencies>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.eclipse.tycho</groupId>
+            <artifactId>tycho-packaging-plugin</artifactId>
+            <version>${tycho-version}</version>
+            <executions>
+              <execution>
+                <phase>process-classes</phase>
+                <goals>
+                  <goal>generate-bundle</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <packageSources>false</packageSources>
+              <exportPackages>
+              </exportPackages>
+              <manifestAttributes>
+                <Bundle-SymbolicName>org.objectledge.maven.connectors.ckpackager;singleton:=true</Bundle-SymbolicName>
+                <Bundle-RequiredExecutionEnvironment>J2SE-1.5,JavaSE-1.6</Bundle-RequiredExecutionEnvironment>
+                <Require-Bundle>org.eclipse.core.resources;bundle-version="3.4.0",org.eclipse.core.runtime;bundle-version="3.4.0",org.eclipse.m2e.jdt;bundle-version="[1.0.0,1.1.0)",org.eclipse.m2e.core;bundle-version="[1.0.0,1.1.0)",org.eclipse.m2e.maven.runtime;bundle-version="[1.0.0,1.1.0)",org.slf4j.api;bundle-version="1.6.1"</Require-Bundle>
+              </manifestAttributes>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+
+    </profile>
+  </profiles>
 
   <build>
     <plugins>
       <plugin>
-        <groupId>org.eclipse.tycho</groupId>
-        <artifactId>tycho-packaging-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <configuration>
+          <outputDirectory>jars</outputDirectory>
+        </configuration>
         <executions>
           <execution>
-            <phase>process-classes</phase>
+            <id>copy</id>
+            <phase>process-resources</phase>
             <goals>
-              <goal>package-plugin</goal>
+              <goal>copy</goal>
             </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>net.sf.json-lib</groupId>
+                  <artifactId>json-lib</artifactId>
+                  <version>2.4</version>
+                  <classifier>jdk15</classifier>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>2.4.1</version>
         <configuration>
-           <packageSources>false</packageSources>
+          <filesets>
+            <fileset>
+              <directory>jars</directory>
+            </fileset>
+          </filesets>
         </configuration>
       </plugin>
     </plugins>
+
+    <pluginManagement>
+      <plugins>
+        <!--TODO TEXT. This plugin's configuration is used in m2e only. -->
+        <plugin>
+          <groupId>org.eclipse.m2e</groupId>
+          <artifactId>lifecycle-mapping</artifactId>
+          <version>1.0.0</version>
+          <configuration>
+            <lifecycleMappingMetadata>
+              <pluginExecutions>
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <versionRange>[2.1,)</versionRange>
+                    <goals>
+                      <goal>copy</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <execute />
+                  </action>
+                </pluginExecution>
+              </pluginExecutions>
+            </lifecycleMappingMetadata>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
+
 </project>
