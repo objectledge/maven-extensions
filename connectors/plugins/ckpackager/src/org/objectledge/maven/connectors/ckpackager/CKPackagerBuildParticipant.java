@@ -1,20 +1,9 @@
 package org.objectledge.maven.connectors.ckpackager;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.StringWriter;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 
 import org.apache.maven.plugin.MojoExecution;
 import org.apache.maven.plugin.MojoFailureException;
@@ -29,12 +18,10 @@ import org.sonatype.plexus.build.incremental.BuildContext;
 
 public class CKPackagerBuildParticipant extends MojoExecutionBuildParticipant {
 
-	private static final int BUFFER_SIZE = 16384;
-
-	private static final String PACK_FILE_ENCODING = "UTF-8";
-
 	private static final Logger log = LoggerFactory
 			.getLogger(CKPackagerBuildParticipant.class);
+	
+	private final PackScriptParser parser = new PackScriptParser();
 
 	public CKPackagerBuildParticipant(MojoExecution execution) {
 		super(execution, true);
@@ -49,22 +36,19 @@ public class CKPackagerBuildParticipant extends MojoExecutionBuildParticipant {
 
 		File packScript = maven.getMojoParameterValue(getSession(),
 				getMojoExecution(), "packScript", File.class);
-		File packScriptDir = packScript.getParentFile();
 
 		if (packScript.exists() && packScript.isFile() && packScript.canRead()) {
 
 			log.info("loading pack script");
-			String script = "{" + readScript(packScript) + "}";
-			JSONObject json = JSONObject.fromObject(script);
-			JSONArray packages = json.getJSONArray("packages");
-			log.info("detected " + packages.size() + " packages ");
-
+			List<File> sourceFiles = new ArrayList<File>();
+			List<File> outputFiles = new ArrayList<File>();
+			parser.parseScript(packScript, sourceFiles, outputFiles);
+			
 			// if pack script changed we'll rebuild
 			if (!buildContext.hasDelta(packScript)) {
 				// pack script hasn't changed, check source files
 				boolean sourcesChanged = false;
-				for (File sourceFile : findSourceFiles(
-						packScriptDir, packages)) {
+				for (File sourceFile : sourceFiles) {
 					if (buildContext.hasDelta(sourceFile)) {
 						sourcesChanged = true;
 					}
@@ -75,11 +59,12 @@ public class CKPackagerBuildParticipant extends MojoExecutionBuildParticipant {
 				}
 			}
 
+			log.info("there were source changes, running ckpackager plugin");
 			// execute mojo
 			Set<IProject> result = super.build(kind, monitor);
 
 			// refresh output files
-			for(File outputFile : findOutputFiles(packScriptDir, packages)) {
+			for(File outputFile : outputFiles) {
 				buildContext.refresh(outputFile);
 			}
 			
@@ -89,54 +74,5 @@ public class CKPackagerBuildParticipant extends MojoExecutionBuildParticipant {
 					+ " does not exist or is unreadable");
 		}
 
-	}
-
-	private String readScript(File packScript)
-			throws UnsupportedEncodingException, FileNotFoundException,
-			IOException {
-		Reader reader = null;
-		try {
-			reader = new InputStreamReader(new FileInputStream(packScript),
-					PACK_FILE_ENCODING);
-			StringWriter writer = new StringWriter();
-			int i = 0;
-			char[] buff = new char[BUFFER_SIZE];
-			while (i > 0) {
-				i = reader.read(buff);
-				if (i > 0) {
-					writer.write(buff, 0, i);
-				}
-			}
-			return writer.toString();
-		} finally {
-			if (reader != null) {
-				reader.close();
-			}
-		}
-	}
-
-	private List<File> findOutputFiles(File baseDir, JSONArray packages) {
-		List<File> paths = new ArrayList<File>();
-		@SuppressWarnings("unchecked")
-		Iterator<JSONObject> i = packages.iterator();
-		while (i.hasNext()) {
-			JSONObject pkg = i.next();
-			paths.add(new File(baseDir, pkg.getString("output")));
-		}
-		return paths;
-	}
-
-	private List<File> findSourceFiles(File baseDir, JSONArray packages) {
-		List<File> paths = new ArrayList<File>();
-		@SuppressWarnings("unchecked")
-		Iterator<JSONObject> i = packages.iterator();
-		while (i.hasNext()) {
-			JSONObject pkg = i.next();
-			JSONArray files = pkg.getJSONArray("files");
-			for (int j = 0; j < files.size(); j++) {
-				paths.add(new File(baseDir, files.getString(j)));
-			}
-		}
-		return paths;
 	}
 }
