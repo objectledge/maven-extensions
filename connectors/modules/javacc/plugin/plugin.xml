@@ -6,7 +6,7 @@
       <configurator
             class="org.objectledge.maven.connectors.javacc.JavaCCProjectConfigurator"
             id="org.objectledge.maven.connectors.javacc"
-            name="JavaCC Project Configurator">
+            name="m2e connector for javacc-maven-plugin:javacc">
       </configurator>
    </extension>
    <extension
@@ -14,7 +14,7 @@
       <configurator
             class="org.objectledge.maven.connectors.javacc.JJTreeJavaCCProjectConfigurator"
             id="org.objectledge.maven.connectors.jjtree-javacc"
-            name="JJTree Project Configurator">          
+            name="m2e connector for javacc-maven-plugin:jjtree-javacc">          
       </configurator>              
    </extension>
    <extension

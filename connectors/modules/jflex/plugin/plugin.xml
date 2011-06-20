@@ -6,7 +6,7 @@
       <configurator
             class="org.objectledge.maven.connectors.jflex.JFlexProjectConfigurator"
             id="org.objectledge.maven.connectors.jflex"
-            name="JFlex Project Configurator">
+            name="m2e connector for maven-jflex-plugin">
       </configurator>
    </extension>
    <extension

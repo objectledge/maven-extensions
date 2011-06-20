@@ -15,7 +15,7 @@
   <packaging>pom</packaging>
 
   <name>Rhino jsc connector</name>
-  <description>An eclipse feature providing lifecycle mapping for jsc-maven-plugin.</description>
+  <description>m2e connector for jsc-maven-plugin.</description>
 
   <modules>
     <module>plugin</module>

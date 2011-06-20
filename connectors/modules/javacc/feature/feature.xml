@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.objectledge.maven.connectors.javacc"
-      label="javacc-maven-plugin lifecycle mapping"
+      label="m2e connector for javacc-maven-plugin"
       version="1.0.0.qualifier"
-      provider-name="ObjectLedge.org"
-      plugin="org.objectledge.maven.connectors.javacc">
+      provider-name="ObjectLedge.org">
 
-   <description url="http://github.com/objectledge/m2e-extensions">
-      m2e lifecycle mapping for javacc-maven-plugin http://mojo.codehaus.org/javacc-maven-plugin/
+   <description>
+     m2e connector for javacc-maven-plugin, http://mojo.codehaus.org/javacc-maven-plugin
    </description>
 
-   <copyright url="http://objectledge.org/">
+   <copyright>
       Copyright (c) 2011 Caltha - Krzewski, Mach, Potempski Sp. J.
    </copyright>
 

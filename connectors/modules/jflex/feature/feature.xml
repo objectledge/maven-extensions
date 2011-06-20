@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.objectledge.maven.connectors.jflex"
-      label="maven-jflex-plugin lifecycle mapping"
+      label="m2e connector maven-jflex-plugin"
       version="1.0.0.qualifier"
-      provider-name="ObjectLedge.org"
-      plugin="org.objectledge.maven.connectors.jflex">
+      provider-name="ObjectLedge.org">
 
-   <description url="http://github.com/objectledge/m2e-extensions">
-      m2e lifecycle mapping for maven-jflex-plugin http://jflex.sourceforge.net/maven-jflex-plugin/
+   <description>
+      m2e connector maven-jflex-plugin, http://jflex.sourceforge.net/maven-jflex-plugin
    </description>
 
-   <copyright url="http://objectledge.org/">
+   <copyright>
       Copyright (c) 2011 Caltha - Krzewski, Mach, Potempski Sp. J.
    </copyright>
 

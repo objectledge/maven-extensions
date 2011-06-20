@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: m2e connector for Rhino jsc
+Bundle-Name: m2e connector for jsc-maven-plugin
 Bundle-SymbolicName: org.objectledge.maven.connectors.jsc;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: ObjectLedge.org

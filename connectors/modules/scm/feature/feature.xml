@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.objectledge.maven.connectors.scm"
-      label="maven-scm-plugin lifecycle mapping"
+      label="m2e connector for maven-scm-plugin"
       version="1.0.0.qualifier"
-      provider-name="ObjectLedge.org"
-      plugin="org.objectledge.maven.connectors.scm">
+      provider-name="ObjectLedge.org">
 
-   <description url="http://github.com/objectledge/m2e-extensions">
-      m2e lifecycle mapping for maven-scm-plugin
+   <description>
+      m2e connector for maven-scm-plugin, http://maven.apache.org/scm/maven-scm-plugin
    </description>
 
-   <copyright url="http://objectledge.org/">
+   <copyright>
       Copyright (c) 2011 Caltha - Krzewski, Mach, Potempski Sp. J.
    </copyright>
 

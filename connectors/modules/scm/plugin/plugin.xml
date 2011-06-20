@@ -6,7 +6,7 @@
       <configurator
             class="org.objectledge.maven.connectors.scm.ScmProjectConfigurator"
             id="org.objectledge.maven.connectors.scm"
-            name="SCM Project Configurator">
+            name="m2e connector for maven-scm-plugin">
       </configurator>
    </extension>
    <extension

@@ -6,7 +6,7 @@
       <configurator
             class="org.objectledge.maven.connectors.jsc.JscProjectConfigurator"
             id="org.objectledge.maven.connectors.jsc"
-            name="JSC Project Configurator">
+            name="m2e connector for jsc-maven-plugin">
       </configurator>
    </extension>
    <extension

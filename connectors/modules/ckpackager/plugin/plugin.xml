@@ -6,7 +6,7 @@
       <configurator
             class="org.objectledge.maven.connectors.ckpackager.CKPackagerProjectConfigurator"
             id="org.objectledge.maven.connectors.ckpackager"
-            name="CKPackager Project Configurator">
+            name="m2e connector for ckpackager-maven-plugin">
       </configurator>
    </extension>
    <extension
