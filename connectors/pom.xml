@@ -18,16 +18,11 @@
   <url>http://objectledge.org/confluence/display/TOOLS/M2E+Connectors</url>
 
   <modules>
-    <module>plugins/javacc</module>
-    <module>plugins/jflex</module>
-    <module>plugins/scm</module>
-    <module>plugins/jsc</module>
-    <module>plugins/ckpackager</module>
-    <module>features/javacc</module>
-    <module>features/jflex</module>
-    <module>features/scm</module>
-    <module>features/jsc</module>
-    <module>features/ckpackager</module>
+    <module>modules/javacc</module>
+    <module>modules/jflex</module>
+    <module>modules/scm</module>
+    <module>modules/jsc</module>
+    <module>modules/ckpackager</module>
     <module>site</module>
   </modules>
 

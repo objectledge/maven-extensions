@@ -2,19 +2,23 @@
  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-    <parent>
+  <parent>
     <groupId>org.objectledge.maven.connectors</groupId>
     <artifactId>parent</artifactId>
     <version>1-SNAPSHOT</version>
     <relativePath>../..</relativePath>
   </parent>
- 
-  <artifactId>jsc-feature</artifactId>
+
+  <groupId>org.objectledge.maven.connectors.jsc</groupId>
+  <artifactId>parent</artifactId>
   <version>1.0.0-SNAPSHOT</version>
-  <packaging>eclipse-feature</packaging>
-  
-  <name>Rhino jsc connector eclipse feature</name>
+  <packaging>pom</packaging>
+
+  <name>Rhino jsc connector</name>
   <description>An eclipse feature providing lifecycle mapping for jsc-maven-plugin.</description>
-  <url>http://objectledge.org/confluence/display/TOOLS/jsc-maven-plugin+connector</url>
-  
+
+  <modules>
+    <module>plugin</module>
+    <module>feature</module>
+  </modules>
 </project>
