@@ -8,6 +8,7 @@ import java.util.Set;
 import org.apache.maven.plugin.MojoExecution;
 import org.apache.maven.plugin.MojoFailureException;
 import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.m2e.core.MavenPlugin;
 import org.eclipse.m2e.core.embedder.IMaven;
@@ -20,7 +21,7 @@ public class CKPackagerBuildParticipant extends MojoExecutionBuildParticipant {
 
 	private static final Logger log = LoggerFactory
 			.getLogger(CKPackagerBuildParticipant.class);
-	
+
 	private final PackScriptParser parser = new PackScriptParser();
 
 	public CKPackagerBuildParticipant(MojoExecution execution) {
@@ -38,39 +39,45 @@ public class CKPackagerBuildParticipant extends MojoExecutionBuildParticipant {
 				getMojoExecution(), "packScript", File.class);
 
 		if (packScript.exists() && packScript.isFile() && packScript.canRead()) {
-
-			log.info("loading pack script");
+			log.info("loading packaging script");
 			List<File> sourceFiles = new ArrayList<File>();
 			List<File> outputFiles = new ArrayList<File>();
 			parser.parseScript(packScript, sourceFiles, outputFiles);
-			
-			// if pack script changed we'll rebuild
-			if (!buildContext.hasDelta(packScript)) {
-				// pack script hasn't changed, check source files
-				boolean sourcesChanged = false;
-				for (File sourceFile : sourceFiles) {
-					if (buildContext.hasDelta(sourceFile)) {
-						sourcesChanged = true;
+
+			if (kind == IncrementalProjectBuilder.AUTO_BUILD
+					|| kind == IncrementalProjectBuilder.INCREMENTAL_BUILD) {
+				log.info("incremental build, checking sources for modifications");
+				// if pack script changed we'll rebuild
+				if (!buildContext.hasDelta(packScript)) {
+					// pack script hasn't changed, check source files
+					boolean sourcesChanged = false;
+					for (File sourceFile : sourceFiles) {
+						if (buildContext.hasDelta(sourceFile)) {
+							sourcesChanged = true;
+						}
+					}
+					if (!sourcesChanged) {
+						log.info("nothing changed, skipping ckpackager plugin");
+						return null;
 					}
 				}
-				if (!sourcesChanged) {
-					log.info("nothing changed");
-					return null;
-				}
+				log.info("there were source changes, running ckpackager plugin");
+			} else {
+				log.info("full build, running ckpackager plugin");
 			}
 
-			log.info("there were source changes, running ckpackager plugin");
 			// execute mojo
 			Set<IProject> result = super.build(kind, monitor);
 
 			// refresh output files
-			for(File outputFile : outputFiles) {
+			log.info("refreshing output files");
+			for (File outputFile : outputFiles) {
 				buildContext.refresh(outputFile);
 			}
-			
+
 			return result;
 		} else {
-			throw new MojoFailureException("packScript " + packScript
+			throw new MojoFailureException("packaging script " + packScript
 					+ " does not exist or is unreadable");
 		}
 
