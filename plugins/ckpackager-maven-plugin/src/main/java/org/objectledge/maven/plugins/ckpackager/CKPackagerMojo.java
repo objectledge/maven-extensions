@@ -1,4 +1,4 @@
-package org.objectledge.maven.ckpackager;
+package org.objectledge.maven.plugins.ckpackager;
 
 import java.io.File;
 

@@ -1,4 +1,4 @@
-package org.objectledge.maven.jsc;
+package org.objectledge.maven.plugins.jsc;
 
 import java.io.File;
 import java.util.ArrayList;
