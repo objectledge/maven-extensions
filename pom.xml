@@ -79,6 +79,7 @@
             <localCheckout>true</localCheckout>
             <mavenExecutorId>forked-path</mavenExecutorId>
             <pushChanges>false</pushChanges>
+            <releaseProfiles>release</releaseProfiles>
             <suppressCommitBeforeBranch>true</suppressCommitBeforeBranch>
             <suppressCommitBeforeTag>true</suppressCommitBeforeTag>
           </configuration>
@@ -116,12 +117,6 @@
   <profiles>
     <profile>
       <id>release</id>
-      <activation>
-        <property>
-          <name>performRelease</name>
-          <value>true</value>
-        </property>
-      </activation>
       <build>
         <plugins>
           <plugin>
