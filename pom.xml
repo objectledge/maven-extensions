@@ -12,8 +12,10 @@
 
   <modules>
     <module>plugins</module>
+    <!-- connectors parent module depends target-platform module -->
     <module>connectors/target-platform</module>
     <module>connectors</module>
+    <module>archetypes</module>
   </modules>
 
   <organization>
