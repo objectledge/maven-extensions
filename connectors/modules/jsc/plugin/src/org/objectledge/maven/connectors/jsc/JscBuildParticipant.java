@@ -5,6 +5,7 @@ import java.util.Set;
 
 import org.apache.maven.plugin.MojoExecution;
 import org.codehaus.plexus.util.Scanner;
+import org.codehaus.plexus.util.xml.Xpp3Dom;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.m2e.core.MavenPlugin;
@@ -34,15 +35,21 @@ public class JscBuildParticipant extends MojoExecutionBuildParticipant {
 			return null;
 		}
 
+		// override outputDirectory
+		File outputDirectory = maven.getMojoParameterValue(getSession(),
+				getMojoExecution(), "outputDirectory", File.class);
+		File alternateOutputDirectory = new File(outputDirectory.getParentFile(),
+				"js-" + outputDirectory.getName());		
+
+		Xpp3Dom dom = getMojoExecution().getConfiguration();
+		Xpp3Dom outputDirectoryConfig = dom.getChild("outputDirectory");		
+		outputDirectoryConfig.setValue(alternateOutputDirectory.getAbsolutePath());
+		
 		// execute mojo
 		Set<IProject> result = super.build(kind, monitor);
 
 		// tell m2e builder to refresh generated files
-		File generated = maven.getMojoParameterValue(getSession(),
-				getMojoExecution(), "outputDirectory", File.class);
-		if (generated != null) {
-			buildContext.refresh(generated);
-		}
+		buildContext.refresh(alternateOutputDirectory);
 
 		return result;
 	}
