@@ -9,7 +9,17 @@
 </location>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="false" type="InstallableUnit">
 <unit id="org.eclipse.m2e.feature.feature.group" version="1.0.0.201106052308"/>
+<unit id="org.eclipse.m2e.sdk.feature.feature.group" version="1.0.0.201106052308"/>
 <repository location="http://download.eclipse.org/technology/m2e/milestones/1.0"/>
+</location>
+<location includeAllPlatforms="false" includeMode="planner" type="InstallableUnit">
+<unit id="org.eclipse.swtbot.eclipse.feature.group" version="2.0.4.20110304_0338-e5aff47-dev-e36"/>
+<unit id="org.eclipse.swtbot.eclipse.gef.feature.group" version="2.0.4.20110304_0338-e5aff47-dev-e36"/>
+<unit id="org.eclipse.swtbot.feature.group" version="2.0.4.20110304_0338-e5aff47-dev-e36"/>
+<unit id="org.eclipse.swtbot.ide.feature.group" version="2.0.4.20110304_0338-e5aff47-dev-e36"/>
+<unit id="org.eclipse.swtbot.eclipse.test.junit3.feature.group" version="2.0.4.20110304_0338-e5aff47-dev-e36"/>
+<unit id="org.eclipse.swtbot.eclipse.test.junit4.feature.group" version="2.0.4.20110304_0338-e5aff47-dev-e36"/>
+<repository location="http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site/"/>
 </location>
 </locations>
 </target>
