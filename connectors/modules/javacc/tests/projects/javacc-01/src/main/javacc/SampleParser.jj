@@ -1,0 +1,73 @@
+options 
+{
+    STATIC = false;
+}
+
+PARSER_BEGIN(SampleParser)
+
+package org.objectledge.maven.connectors.javacc.tests;
+
+import java.io.Reader;
+import java.io.StringReader;
+import java.util.List;
+import java.util.ArrayList;
+
+public class SampleParser
+{
+    public static List<Integer> parse(String in)
+        throws ParseException
+    {
+        Reader r = new StringReader(in);
+        SampleParser parser = new SampleParser(r);
+   		return parser.numberSequence();
+    }
+}
+
+PARSER_END(SampleParser)
+
+SKIP :
+{
+  " " | "\t"
+}
+
+TOKEN :
+{
+    <#DIGIT : ["0"-"9"]> |
+    <NUMBER : (<DIGIT>)+> |
+    <COMMA : ",">
+}
+
+int number():
+{
+    Token t;
+}
+{
+    t = <NUMBER>
+    {
+        return Integer.parseInt(t.image);  
+    }
+}
+
+List<Integer> numberSequence():
+{
+    List<Integer> sequence = new ArrayList<Integer>();
+    int i;
+}
+{
+    (
+        i = number()
+        {
+           sequence.add(i);
+        }
+        (
+            <COMMA>
+            i = number()
+            {
+                sequence.add(i);
+            }
+        )*
+    )
+    {
+        return sequence;
+    }
+}

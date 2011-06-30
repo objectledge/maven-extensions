@@ -1,0 +1,8 @@
+<settings>
+  <localRepository>target/localrepo</localRepository>
+
+  <activeProfiles>
+    <activeProfile>test</activeProfile>
+  </activeProfiles>
+
+</settings>
