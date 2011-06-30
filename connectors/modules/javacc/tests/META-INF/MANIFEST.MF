@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: tests for m2e connector for javacc-maven-plugin
-Bundle-SymbolicName: org.objectledge.maven.connectors.javacc-tests;singleton:=true
+Bundle-SymbolicName: org.objectledge.maven.connectors.javacc.tests;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: ObjectLedge.org
 Bundle-RequiredExecutionEnvironment: J2SE-1.5,
