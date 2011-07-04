@@ -43,7 +43,6 @@
           </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
-          <directory></directory>
           <includes>
             <include>lifecycle-mapping-metadata.xml</include>
             <include>build.properties</include>
@@ -56,12 +55,38 @@
     <module id="feature" dir="feature" name="feature">
       <fileSets>
         <fileSet filtered="true" encoding="UTF-8">
-          <directory></directory>
           <includes>
             <include>feature.xml</include>
             <include>build.properties</include>
             <include>.gitignore</include>
           </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="tests" dir="tests" name="tests">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+          <includes>
+            <include>build.properties</include>
+            <include>plugin_customization.ini</include>
+            <include>settings.xml</include>
+            <include>.gitignore</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>META-INF</directory>
+          <includes>
+            <include>MANIFEST.MF</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>projects/</directory>
         </fileSet>
       </fileSets>
     </module>
