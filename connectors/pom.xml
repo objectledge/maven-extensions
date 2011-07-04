@@ -24,7 +24,7 @@
     <module>modules/jsc</module>
     <module>modules/ckpackager</module>
     <module>modules/coral</module>
-    <module>site</module>
+    <module>eclipse-repository</module>
   </modules>
 
   <properties>
