@@ -1,0 +1,7 @@
+CREATE RESOURCE CLASS FINAL sample
+JAVA CLASS org.objectledge.maven.connectors.coral.tests.SampleResource
+HANDLER CLASS org.objectledge.coral.datatypes.GenericResourceHandler
+SUPERCLASSES ( coral.Node )
+ATTRIBUTES (
+    REQUIRED string value
+);

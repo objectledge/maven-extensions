@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lifecycleMappingMetadata>
+  <pluginExecutions>
+    <pluginExecution>
+      <pluginExecutionFilter>
+        <groupId>org.objectledge.coral</groupId>
+        <artifactId>coral-maven2-plugin</artifactId>
+        <versionRange>[1.0,)</versionRange>
+        <goals>
+          <goal>generator</goal>
+        </goals>
+      </pluginExecutionFilter>
+      <action>
+        <!-- coral-maven2-plugin is using plexus-build-api to integrate itself into IDE build process 
+          without external configurator -->
+        <execute>
+          <runOnIncremental>true</runOnIncremental>
+        </execute>
+      </action>
+    </pluginExecution>
+  </pluginExecutions>
+</lifecycleMappingMetadata>
