@@ -45,9 +45,14 @@ if (arguments[0] == '-dump') {
 
 	CKPACKAGER.packFile = arguments[0];
 	var packFile = new File(CKPACKAGER.packFile);
-	CKPACKAGER.packDir = packFile.getParent() || './';
+	
+	CKPACKAGER.packDir = packFile.getParent();
 
-	CKPACKAGER.outputDir = CKPACKAGER.packDir;
+	if (arguments[1] == '-output') {
+		CKPACKAGER.outputDir = new File(arguments[2]);
+	} else {
+		CKPACKAGER.outputDir = CKPACKAGER.packDir;		
+	}
 
 	CKPACKAGER.load('ckpackager.includes.packager');
 

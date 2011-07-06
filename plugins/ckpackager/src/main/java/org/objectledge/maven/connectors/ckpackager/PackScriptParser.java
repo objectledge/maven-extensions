@@ -1,4 +1,5 @@
 package org.objectledge.maven.connectors.ckpackager;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -23,7 +24,7 @@ public class PackScriptParser {
 	public PackScriptParser() {
 		Context cx = Context.enter();
 		try {
-			// initialize Rhino global context and save it for future use			
+			// initialize Rhino global context and save it for future use
 			globalScope = cx.initStandardObjects();
 		} finally {
 			Context.exit();
@@ -57,8 +58,8 @@ public class PackScriptParser {
 		}
 	}
 
-	public void parseScript(File scriptFile, List<File> sourceFiles,
-			List<File> outputFiles) throws IOException {
+	public void parseScript(File scriptFile, File outputDirectory,
+			List<File> sourceFiles, List<File> outputFiles) throws IOException {
 		File scriptDir = scriptFile.getParentFile();
 		Context cx = Context.enter();
 		try {
@@ -68,7 +69,7 @@ public class PackScriptParser {
 			String scriptBody = readScript(scriptFile);
 			cx.evaluateString(scope, "var script = {" + scriptBody + "\n};",
 					scriptFile.getAbsolutePath(), 1, null);
-			
+
 			Scriptable script = (Scriptable) scope.get("script", scope);
 			Scriptable packages = (Scriptable) script.get("packages", script);
 			int i = 0;
@@ -76,7 +77,7 @@ public class PackScriptParser {
 				Scriptable packageDef = (Scriptable) packages
 						.get(i++, packages);
 				String output = (String) packageDef.get("output", packageDef);
-				outputFiles.add(new File(scriptDir, output));
+				outputFiles.add(new File(outputDirectory, output));
 				Scriptable files = (Scriptable) packageDef.get("files",
 						packageDef);
 				int j = 0;

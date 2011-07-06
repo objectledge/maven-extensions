@@ -10,8 +10,8 @@
     <relativePath>../../../..</relativePath>
   </parent>
 
-  <groupId>org.objectledge.maven.plugins.ckpackager.test</groupId>
-  <artifactId>test</artifactId>
+  <groupId>org.objectledge.maven.plugins.ckpackager.tests</groupId>
+  <artifactId>basic</artifactId>
   <packaging>jar</packaging>
 
   <build>
@@ -28,7 +28,7 @@
           </execution>
         </executions>
         <configuration>
-          <packScript>src/ckpackager/basic.pack</packScript>
+          <script>src/ckpackager/basic.pack</script>
         </configuration>
       </plugin>
     </plugins>

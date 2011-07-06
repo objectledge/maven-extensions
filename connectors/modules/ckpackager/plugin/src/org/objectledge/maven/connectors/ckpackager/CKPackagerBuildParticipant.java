@@ -35,20 +35,24 @@ public class CKPackagerBuildParticipant extends MojoExecutionBuildParticipant {
 		IMaven maven = MavenPlugin.getMaven();
 		BuildContext buildContext = getBuildContext();
 
-		File packScript = maven.getMojoParameterValue(getSession(),
-				getMojoExecution(), "packScript", File.class);
+		File script = maven.getMojoParameterValue(getSession(),
+				getMojoExecution(), "script", File.class);
 
-		if (packScript.exists() && packScript.isFile() && packScript.canRead()) {
+		File outputDirectory = maven.getMojoParameterValue(getSession(),
+				getMojoExecution(), "outputDirectory", File.class);
+
+		if (script.exists() && script.isFile() && script.canRead()) {
 			log.info("loading packaging script");
 			List<File> sourceFiles = new ArrayList<File>();
 			List<File> outputFiles = new ArrayList<File>();
-			parser.parseScript(packScript, sourceFiles, outputFiles);
+			parser.parseScript(script, outputDirectory, sourceFiles,
+					outputFiles);
 
 			if (kind == IncrementalProjectBuilder.AUTO_BUILD
 					|| kind == IncrementalProjectBuilder.INCREMENTAL_BUILD) {
 				log.info("incremental build, checking sources for modifications");
 				// if pack script changed we'll rebuild
-				if (!buildContext.hasDelta(packScript)) {
+				if (!buildContext.hasDelta(script)) {
 					// pack script hasn't changed, check source files
 					boolean sourcesChanged = false;
 					for (File sourceFile : sourceFiles) {
@@ -77,7 +81,7 @@ public class CKPackagerBuildParticipant extends MojoExecutionBuildParticipant {
 
 			return result;
 		} else {
-			throw new MojoFailureException("packaging script " + packScript
+			throw new MojoFailureException("packaging script " + script
 					+ " does not exist or is unreadable");
 		}
 
