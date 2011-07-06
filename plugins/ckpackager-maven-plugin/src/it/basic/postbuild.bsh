@@ -1,0 +1,7 @@
+import java.io.File;
+
+File f = new File(basedir, "target/generated-resources/ckpackager/basic_sample_compressed.js");
+
+if(!f.exists()) {
+	throw new Exception(f.getAbsolutePath() + " is missing");
+}
