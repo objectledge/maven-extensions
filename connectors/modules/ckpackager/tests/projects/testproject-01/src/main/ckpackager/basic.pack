@@ -1,0 +1,31 @@
+﻿/*
+ * CKPackager - Sample Package file
+ */
+
+header :
+	'/*'												+ '\n' +
+	' * This file has been compressed with CKPackager'	+ '\n' +
+	' */'												+ '\n' +
+	'\n',
+
+constants :
+	{
+		'BASIC_COLOR_RED'	: 1,
+		'BASIC_COLOR_BLUE'	: 2,
+		'BASIC_COLOR_WHITE'	: 3,
+		'MyObject.CONST'	: 1
+	},
+
+packages :
+	[
+		{
+			output : 'basic_sample_compressed.js',
+
+			renameGlobals : false,
+			compactJavascript : true,
+			files :
+				[
+					'basic_sample.js'
+				]
+		}
+	]
