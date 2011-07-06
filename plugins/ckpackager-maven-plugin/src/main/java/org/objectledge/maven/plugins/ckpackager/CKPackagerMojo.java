@@ -31,16 +31,12 @@ public class CKPackagerMojo extends AbstractMojo {
 					"Processing packaging script "
 							+ packScript.getAbsolutePath());
 
-			String userDir = System.getProperty("user.dir");
 			try {
-				System.setProperty("user.dir", packScript.getParent());
 				ckpackager.launcher.main(new String[] { packScript
 						.getAbsolutePath() });
 			} catch (RuntimeException e) {
 				throw new MojoExecutionException(
 						"ckpackager invocation failed", e);
-			} finally {
-				System.setProperty("user.dir", userDir);
 			}
 		} else {
 			throw new MojoFailureException(packScript.getAbsolutePath()
