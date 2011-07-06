@@ -56,7 +56,8 @@ public class JFlexBuildParticipant extends MojoExecutionBuildParticipant {
 		File[] lexDefinitions = maven.getMojoParameterValue(getSession(),
 				getMojoExecution(), "lexDefinitions", File[].class);
 		if (lexDefinitions == null || lexDefinitions.length == 0) {
-			return new File[] { new File("src/main/jflex") };
+			return new File[] { new File(session.getCurrentProject()
+					.getBasedir(), "src/main/jflex") };
 		}
 		return lexDefinitions;
 	}
