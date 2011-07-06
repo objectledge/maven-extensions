@@ -9,7 +9,8 @@
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>ckpackager</artifactId>
+  <groupId>org.objectledge.ckpackager</groupId>
+  <artifactId>ckpackager-library</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
@@ -62,8 +63,8 @@
               <goal>compile</goal>
             </goals>
             <configuration>
-              <sourceDirectory>src/main/js/ckpackager</sourceDirectory>
-              <packageName>ckpackager</packageName>
+              <sourceDirectory>src/main/js/org/objectledge/ckpackager</sourceDirectory>
+              <packageName>org.objectledge.ckpackager</packageName>
             </configuration>
           </execution>
         </executions>

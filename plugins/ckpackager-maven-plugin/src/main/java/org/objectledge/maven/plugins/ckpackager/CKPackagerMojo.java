@@ -1,14 +1,14 @@
 package org.objectledge.maven.plugins.ckpackager;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
-import org.objectledge.maven.connectors.ckpackager.PackScriptParser;
+import org.objectledge.ckpackager.Launcher;
+import org.objectledge.ckpackager.PackScriptParser;
 
 /**
  * Packages custom CKEditor distribution.
@@ -71,7 +71,7 @@ public class CKPackagerMojo extends AbstractMojo {
 			}
 
 			try {
-				ckpackager.launcher.main(new String[] {
+				Launcher.main(new String[] {
 						script.getAbsolutePath(), "-output",
 						outputDirectory.getAbsolutePath() });
 			} catch (RuntimeException e) {

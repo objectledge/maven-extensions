@@ -14,4 +14,4 @@ Require-Bundle: org.eclipse.core.resources;bundle-version="3.4.0",
  org.slf4j.api;bundle-version="1.6.1"
 Bundle-ClassPath: .,
  jars/js-1.7R2.jar,
- jars/ckpackager-1.0.0-SNAPSHOT.jar
+ jars/ckpackager-library-1.0.0-SNAPSHOT.jar

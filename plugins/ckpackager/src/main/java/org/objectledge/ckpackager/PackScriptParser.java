@@ -1,4 +1,4 @@
-package org.objectledge.maven.connectors.ckpackager;
+package org.objectledge.ckpackager;
 
 import java.io.File;
 import java.io.FileInputStream;
