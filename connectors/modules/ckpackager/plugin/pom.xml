@@ -36,6 +36,11 @@
                   <artifactId>js</artifactId>
                   <version>1.7R2</version>
                 </artifactItem>
+                <artifactItem>
+                  <groupId>org.objectledge.maven.plugins</groupId>
+                  <artifactId>ckpackager</artifactId>
+                  <version>1.0.0-SNAPSHOT</version>
+                </artifactItem>
               </artifactItems>
             </configuration>
           </execution>

@@ -21,6 +21,14 @@
   </description>
   <url>http://objectledge.org/confluence/display/TOOLS/ckpackager-maven-plugin</url>
 
+  <dependencies>
+    <dependency>
+      <groupId>rhino</groupId>
+      <artifactId>js</artifactId>
+      <version>1.7R2</version>
+    </dependency>
+  </dependencies>
+
   <build>
     <plugins>
       <plugin>
