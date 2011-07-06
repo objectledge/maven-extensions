@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.objectledge.maven.connectors.scm.tests</groupId>
+  <artifactId>testproject-01</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>Maven SCM connector - test project</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <build>
+    <sourceDirectory>target/checkout/src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-scm-plugin</artifactId>
+        <version>1.5</version>
+        <executions>
+          <execution>
+            <id>fetch-source</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>checkout</goal>
+            </goals>
+            <configuration>
+              <connectionUrl>scm:git:file://${basedir}/repository</connectionUrl>
+              <checkoutDirectory>target/checkout</checkoutDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
