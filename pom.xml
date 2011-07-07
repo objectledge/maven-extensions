@@ -130,6 +130,7 @@
         <groupId>com.mycila.maven-license-plugin</groupId>
         <artifactId>maven-license-plugin</artifactId>
         <version>1.9.0</version>
+        <inherited>false</inherited>
         <configuration>
           <aggregate>true</aggregate>
           <strictCheck>true</strictCheck>
@@ -164,6 +165,7 @@
             <exclude>**/*.git/**</exclude>
             <exclude>**/archetype-resources/**</exclude>
             <exclude>**/archetypes/**/goal.txt</exclude>
+            <exclude>**/coral/tests/**Resource*.java</exclude>
           </excludes>
         </configuration>
       </plugin>
@@ -175,6 +177,21 @@
       <id>release</id>
       <build>
         <plugins>
+          <plugin>
+            <groupId>com.mycila.maven-license-plugin</groupId>
+            <artifactId>maven-license-plugin</artifactId>
+            <version>1.9.0</version>
+            <inherited>false</inherited>
+            <executions>
+              <execution>
+                <id>check-licenses</id>
+                <phase>validate</phase>
+                <goals>
+                  <goal>check</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
@@ -189,6 +206,25 @@
               </execution>
             </executions>
           </plugin>
+          <!-- Disabled due to https://bugs.eclipse.org/bugs/show_bug.cgi?id=344691
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jarsigner-plugin</artifactId>
+            <version>1.2</version>
+            <executions>
+              <execution>
+                <id>sign-jars</id>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <alias>objectledge.org</alias>
+              <sigfile>LEDGE</sigfile>
+            </configuration>
+          </plugin>
+          -->
         </plugins>
       </build>
     </profile>
