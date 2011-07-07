@@ -1,3 +1,16 @@
+<!--
+
+    Copyright (c) 2011 Caltha - Krzewski, Mach, Potempski Sp. J.
+
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+
+    Contributors:
+        Caltha - Krzewski, Mach, Potempski Sp. J.
+
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -112,6 +125,49 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>com.mycila.maven-license-plugin</groupId>
+        <artifactId>maven-license-plugin</artifactId>
+        <version>1.9.0</version>
+        <configuration>
+          <aggregate>true</aggregate>
+          <strictCheck>true</strictCheck>
+          <header>etc/license_header.txt</header>
+          <mapping>
+            <java>SLASHSTAR_STYLE</java>
+            <js>SLASHSTAR_STYLE</js>
+            <pack>SLASHSTAR_STYLE</pack>
+            <jflex>SLASHSTAR_STYLE</jflex>
+            <jj>SLASHSTAR_STYLE</jj>
+            <bsh>SLASHSTAR_STYLE</bsh>
+            <target>XML_STYLE</target>
+            <ini>SCRIPT_STYLE</ini>
+            <list>SCRIPT_STYLE</list>
+            <rml>SCRIPT_STYLE</rml>
+          </mapping>
+          <useDefaultExcludes>false</useDefaultExcludes>
+          <excludes>
+            <exclude>**/*~</exclude>
+            <exclude>**/target/**</exclude>
+            <exclude>**/release.properties</exclude>
+            <exclude>**/.classpath</exclude>
+            <exclude>**/.project</exclude>
+            <exclude>**/.settings/**</exclude>
+            <exclude>**/MANIFEST.MF</exclude>
+            <exclude>**/*.jar</exclude>
+            <exclude>**/.gitignore</exclude>
+            <exclude>**/epl-v100.html</exclude>
+            <exclude>**/README*</exclude>
+            <exclude>**/.svn/**</exclude>
+            <exclude>**/.git/**</exclude>
+            <exclude>**/*.git/**</exclude>
+            <exclude>**/archetype-resources/**</exclude>
+            <exclude>**/archetypes/**/goal.txt</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 
   <profiles>
