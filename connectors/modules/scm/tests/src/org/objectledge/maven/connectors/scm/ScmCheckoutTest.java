@@ -15,10 +15,6 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IncrementalProjectBuilder;
-import org.eclipse.core.runtime.Path;
-import org.eclipse.jdt.core.IClasspathEntry;
-import org.eclipse.jdt.core.IJavaProject;
-import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.m2e.core.project.ResolverConfiguration;
 import org.eclipse.m2e.tests.common.AbstractMavenProjectTestCase;
 
@@ -44,6 +40,6 @@ public class ScmCheckoutTest extends AbstractMavenProjectTestCase {
 				.getFile("target/classes/org/objectledge/maven/connectors/scm/tests/HelloWorld.class");
 		assertTrue(compiled.isSynchronized(IResource.DEPTH_ZERO));
 		assertTrue(compiled.isAccessible());
-	
+
 	}
 }

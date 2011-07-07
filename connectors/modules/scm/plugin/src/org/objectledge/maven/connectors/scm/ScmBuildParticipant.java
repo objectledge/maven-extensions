@@ -38,14 +38,14 @@ public class ScmBuildParticipant extends MojoExecutionBuildParticipant {
 		IMaven maven = MavenPlugin.getMaven();
 		BuildContext buildContext = getBuildContext();
 		MojoExecution mojoExecution = getMojoExecution();
-		
+
 		String targetDirectoryParameter = "workingDirectory";
 		if ("bootstrap".equals(mojoExecution.getGoal())) {
 			targetDirectoryParameter = "checkoutDirectory";
 		}
 		if ("checkout".equals(mojoExecution.getGoal())) {
 			targetDirectoryParameter = "checkoutDirectory";
-		} 
+		}
 		File targetDirectory = maven.getMojoParameterValue(getSession(),
 				getMojoExecution(), targetDirectoryParameter, File.class);
 		if (targetDirectory != null) {

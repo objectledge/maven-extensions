@@ -41,11 +41,12 @@ public class ProjectTest extends AbstractMavenProjectTestCase {
 		IFile interfaceFile = project1
 				.getFile("src/main/java/org/objectledge/maven/connectors/coral/tests/SampleResource.java");
 
-		assertTrue("interface file not synchronized", interfaceFile.isSynchronized(IResource.DEPTH_ZERO));
-		assertTrue("interface file not accessible", interfaceFile.isAccessible());
+		assertTrue("interface file not synchronized",
+				interfaceFile.isSynchronized(IResource.DEPTH_ZERO));
+		assertTrue("interface file not accessible",
+				interfaceFile.isAccessible());
 	}
-	
-	
+
 	public void testIncrementalBuild() throws Exception {
 		ResolverConfiguration configuration = new ResolverConfiguration();
 		IProject project1 = importProject("projects/testproject-02/pom.xml",
@@ -61,13 +62,16 @@ public class ProjectTest extends AbstractMavenProjectTestCase {
 		IFile interfaceFile = project1
 				.getFile("src/main/java/org/objectledge/maven/connectors/coral/tests/SampleResource.java");
 
-		assertTrue("interface file not synchronized", interfaceFile.isSynchronized(IResource.DEPTH_ZERO));
-		assertTrue("interface file not accessible", interfaceFile.isAccessible());
+		assertTrue("interface file not synchronized",
+				interfaceFile.isSynchronized(IResource.DEPTH_ZERO));
+		assertTrue("interface file not accessible",
+				interfaceFile.isAccessible());
 
 		IFile rmlFile = project1.getFile("src/main/resources/rml/sample.rml");
 		String rmlContents = getContents(rmlFile);
 		String interfaceContents = getContents(interfaceFile);
-		assertFalse("interface file not clean", interfaceContents.contains("getSecondAttribute()"));
+		assertFalse("interface file not clean",
+				interfaceContents.contains("getSecondAttribute()"));
 
 		rmlContents = rmlContents.replace("string firstProperty",
 				"string firstProperty,\nstring secondAttribute");
@@ -77,11 +81,12 @@ public class ProjectTest extends AbstractMavenProjectTestCase {
 
 		interfaceFile = project1
 				.getFile("src/main/java/org/objectledge/maven/connectors/coral/tests/SampleResource.java");
-		assertTrue("interface file not synchronized", interfaceFile.isSynchronized(IResource.DEPTH_ZERO));
+		assertTrue("interface file not synchronized",
+				interfaceFile.isSynchronized(IResource.DEPTH_ZERO));
 		interfaceContents = getContents(interfaceFile);
-		assertTrue("interface file does not reference secondAttribute", interfaceContents.contains("getSecondAttribute()"));
+		assertTrue("interface file does not reference secondAttribute",
+				interfaceContents.contains("getSecondAttribute()"));
 	}
-	
 
 	private void setContents(IFile file, String contents) throws CoreException,
 			UnsupportedEncodingException {

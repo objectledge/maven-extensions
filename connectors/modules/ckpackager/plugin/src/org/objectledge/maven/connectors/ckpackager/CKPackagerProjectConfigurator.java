@@ -27,7 +27,7 @@ public class CKPackagerProjectConfigurator extends AbstractProjectConfigurator {
 			IProgressMonitor monitor) throws CoreException {
 		// nothing to do
 	}
-	
+
 	@Override
 	public AbstractBuildParticipant getBuildParticipant(
 			IMavenProjectFacade projectFacade, MojoExecution execution,

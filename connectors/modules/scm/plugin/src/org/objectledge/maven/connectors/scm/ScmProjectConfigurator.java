@@ -27,7 +27,7 @@ public class ScmProjectConfigurator extends AbstractProjectConfigurator {
 			IProgressMonitor monitor) throws CoreException {
 		// nothing to do
 	}
-	
+
 	@Override
 	public AbstractBuildParticipant getBuildParticipant(
 			IMavenProjectFacade projectFacade, MojoExecution execution,

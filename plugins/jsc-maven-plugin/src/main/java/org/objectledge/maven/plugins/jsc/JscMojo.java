@@ -123,7 +123,7 @@ public class JscMojo extends AbstractMojo {
 		appendArguments(argList);
 		appendSources(argList);
 
-		Main.main(argList.toArray(new String[argList.size()]));	
+		Main.main(argList.toArray(new String[argList.size()]));
 	}
 
 	private void appendArguments(List<String> argList) {
@@ -151,7 +151,7 @@ public class JscMojo extends AbstractMojo {
 			argList.add("-opt");
 			argList.add(Integer.toString(optLevel));
 		}
-		
+
 		if (versionNumber != null) {
 			argList.add("-version");
 			argList.add(versionNumber);

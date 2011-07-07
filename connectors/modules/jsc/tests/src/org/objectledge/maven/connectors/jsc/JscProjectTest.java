@@ -38,8 +38,7 @@ public class JscProjectTest extends AbstractMavenProjectTestCase {
 		IJavaProject javaProject1 = JavaCore.create(project1);
 		IClasspathEntry[] cp1 = javaProject1.getRawClasspath();
 
-		assertEquals(
-				new Path("/testproject-01/target/js-classes"),
+		assertEquals(new Path("/testproject-01/target/js-classes"),
 				cp1[3].getPath());
 
 		IFile file = project1

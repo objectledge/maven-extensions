@@ -19,14 +19,14 @@ import java.util.List;
 import org.junit.Test;
 
 public class SampleParserTest {
-	
+
 	@Test
-	public void parseTest() throws ParseException {		
+	public void parseTest() throws ParseException {
 		List<Integer> sequence = SampleParser.parse("1, 2, 3");
 		assertEquals(3, sequence.size());
 		assertEquals(1, sequence.get(0).intValue());
 	}
-	
+
 	@Test
 	public void parseExceptionTest() {
 		try {

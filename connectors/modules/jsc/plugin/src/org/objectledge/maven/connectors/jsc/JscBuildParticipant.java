@@ -49,13 +49,15 @@ public class JscBuildParticipant extends MojoExecutionBuildParticipant {
 		// override outputDirectory
 		File outputDirectory = maven.getMojoParameterValue(getSession(),
 				getMojoExecution(), "outputDirectory", File.class);
-		File alternateOutputDirectory = new File(outputDirectory.getParentFile(),
-				"js-" + outputDirectory.getName());		
+		File alternateOutputDirectory = new File(
+				outputDirectory.getParentFile(), "js-"
+						+ outputDirectory.getName());
 
 		Xpp3Dom dom = getMojoExecution().getConfiguration();
-		Xpp3Dom outputDirectoryConfig = dom.getChild("outputDirectory");		
-		outputDirectoryConfig.setValue(alternateOutputDirectory.getAbsolutePath());
-		
+		Xpp3Dom outputDirectoryConfig = dom.getChild("outputDirectory");
+		outputDirectoryConfig.setValue(alternateOutputDirectory
+				.getAbsolutePath());
+
 		// execute mojo
 		Set<IProject> result = super.build(kind, monitor);
 

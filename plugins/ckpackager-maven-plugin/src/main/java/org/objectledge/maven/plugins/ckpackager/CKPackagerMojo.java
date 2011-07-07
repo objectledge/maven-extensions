@@ -82,9 +82,8 @@ public class CKPackagerMojo extends AbstractMojo {
 			}
 
 			try {
-				Launcher.main(new String[] {
-						script.getAbsolutePath(), "-output",
-						outputDirectory.getAbsolutePath() });
+				Launcher.main(new String[] { script.getAbsolutePath(),
+						"-output", outputDirectory.getAbsolutePath() });
 			} catch (RuntimeException e) {
 				throw new MojoExecutionException(
 						"ckpackager invocation failed", e);
