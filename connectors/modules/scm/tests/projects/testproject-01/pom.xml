@@ -28,7 +28,7 @@
               <goal>checkout</goal>
             </goals>
             <configuration>
-              <connectionUrl>scm:git:file://${basedir}/repository</connectionUrl>
+              <connectionUrl>scm:git:file://${basedir}/repository.git</connectionUrl>
               <checkoutDirectory>target/checkout</checkoutDirectory>
             </configuration>
           </execution>
