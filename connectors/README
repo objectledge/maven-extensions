@@ -1,8 +1,0 @@
-m2e extensions for Maven plugins used to build objectledge.org projects.
-
-Build setup is based on https://github.com/bimargulies/m2e-code-quality extension packages by Benson Margulies.
-
-It requires m2e 1.0.0 which is available from http://download.eclipse.org/technology/m2e/updates/N at the time of writing.
-  
-Right now the build depends on Tycho 0.13-SNAPSHOT so it will need to be updated once Tycho 1.0 is out.
-  
