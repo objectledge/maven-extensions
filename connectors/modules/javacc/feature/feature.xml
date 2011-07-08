@@ -37,7 +37,7 @@ http://www.eclipse.org/legal/epl-v10.html
    </license>
 
    <url>
-      <update label="objectledge.org m2e connectors" url="http://objectledge.github.com/maven-extensions/connectors/updates/"/>
+      <update label="objectledge.org m2e connectors" url="http://objectledge.github.com/maven-extensions/connectors/updates/development"/>
    </url>
 
    <plugin
