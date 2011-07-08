@@ -31,5 +31,5 @@
    <feature url="features/org.objectledge.maven.connectors.coral_1.0.0.qualifier.jar" id="org.objectledge.maven.connectors.coral" version="1.0.0.qualifier">
       <category name="org.objectledge.maven.connectors"/>
    </feature>
-   <category-def name="org.objectledge.maven.connectors" label="Project configurators for Maven plugins used by ObjectLedge"/>
+   <category-def name="org.objectledge.maven.connectors" label="objectledge.org m2e connectors"/>
 </site>
