@@ -18,8 +18,9 @@
       version="1.0.0.qualifier"
       provider-name="Objectedge.org">
 
-   <description>
+   <description url="http://objectledge.org/confluence/display/TOOLS/coral-maven2-plugin+connector">
       m2e connector for coral-maven2-plugin
+http://objectledge.org/confluence/display/CORAL
    </description>
 
    <copyright>
@@ -27,7 +28,7 @@
    </copyright>
 
    <license url="http://www.eclipse.org/legal/epl-v10.html">
-Copyright (c) 2011 Caltha - Krzewski, Mach, Potempski Sp. J.   
+      Copyright (c) 2011 Caltha - Krzewski, Mach, Potempski Sp. J.   
    
 All rights reserved. This program and the accompanying materials
 are made available under the terms of the Eclipse Public License
