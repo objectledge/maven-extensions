@@ -30,6 +30,11 @@
   <description>Parent project for Maven plugins provided by objectledge.org</description>
   <url>http://objectledge.org/confluence/display/TOOLS/Maven+plugins</url>
 
+  <ciManagement>
+    <system>bamboo</system>
+    <url>http://objectledge.org/bamboo/browse/TOOLS-MAVEN</url>
+  </ciManagement>
+
   <modules>
     <module>jsc-maven-plugin</module>
     <module>ckpackager</module>

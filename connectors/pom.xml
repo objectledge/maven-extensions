@@ -30,6 +30,11 @@
   <description>Parent project for Maven plugins provided by objectledge.org</description>
   <url>http://objectledge.org/confluence/display/TOOLS/M2E+Connectors</url>
 
+  <ciManagement>
+    <system>bamboo</system>
+    <url>http://objectledge.org/bamboo/browse/TOOLS-M2E</url>
+  </ciManagement>
+  
   <modules>
     <module>modules/javacc</module>
     <module>modules/jflex</module>
