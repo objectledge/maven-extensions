@@ -17,12 +17,12 @@
   <parent>
     <groupId>org.objectledge.maven</groupId>
     <artifactId>parent</artifactId>
-    <version>1-SNAPSHOT</version>
+    <version>2-SNAPSHOT</version>
   </parent>
 
   <groupId>org.objectledge.maven.connectors</groupId>
   <artifactId>parent</artifactId>
-  <version>1-SNAPSHOT</version>
+  <version>2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>ObjectLedge.org M2E connectors.</name>

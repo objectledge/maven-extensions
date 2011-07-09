@@ -17,13 +17,13 @@
   <parent>
     <groupId>org.objectledge.maven.plugins</groupId>
     <artifactId>parent</artifactId>
-    <version>1-SNAPSHOT</version>
+    <version>2-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
 
   <groupId>org.objectledge.ckpackager</groupId>
   <artifactId>ckpackager-library</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>CKPackager library</name>
@@ -47,7 +47,7 @@
       <plugin>
         <groupId>org.objectledge.maven.plugins</groupId>
         <artifactId>jsc-maven-plugin</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.1.0-SNAPSHOT</version>
         <executions>
           <execution>
             <id>main</id>
