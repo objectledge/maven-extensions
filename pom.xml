@@ -142,6 +142,7 @@
             <exclude>**/*~</exclude>
             <exclude>**/target/**</exclude>
             <exclude>**/release.properties</exclude>
+            <exclude>**/*.releaseBackup</exclude>
             <exclude>**/.classpath</exclude>
             <exclude>**/.project</exclude>
             <exclude>**/.settings/**</exclude>
@@ -156,6 +157,7 @@
             <exclude>**/archetype-resources/**</exclude>
             <exclude>**/archetypes/**/goal.txt</exclude>
             <exclude>**/coral/tests/**Resource*.java</exclude>
+            <exclude>**/ckpackager/src/orig/**</exclude>
           </excludes>
         </configuration>
       </plugin>
