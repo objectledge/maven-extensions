@@ -72,7 +72,7 @@ public class ScmBuildParticipant extends MojoExecutionBuildParticipant {
 	/**
 	 * Get output directory of the SCM plugin.
 	 */
-	private File getOutputDirectory(IMaven maven, MavenSession session,
+	private static File getOutputDirectory(IMaven maven, MavenSession session,
 			MojoExecution mojoExecution) throws CoreException {
 		String targetDirectoryParameter;
 		if ("bootstrap".equals(mojoExecution.getGoal())
@@ -95,7 +95,7 @@ public class ScmBuildParticipant extends MojoExecutionBuildParticipant {
 	 *            top level directory.
 	 * @return string describing directory layout.
 	 */
-	private String directoryLayout(File dir) {
+	private static String directoryLayout(File dir) {
 		StringBuilder buff = new StringBuilder();
 		if (dir.exists()) {
 			Queue<File> stack = new LinkedList<File>();
@@ -124,7 +124,7 @@ public class ScmBuildParticipant extends MojoExecutionBuildParticipant {
 	 * @param file
 	 *            refresh origin.
 	 */
-	private void refreshResource(IProject project, File file,
+	private static void refreshResource(IProject project, File file,
 			IProgressMonitor monitor) throws CoreException {
 		if (project == null || file == null) {
 			return;

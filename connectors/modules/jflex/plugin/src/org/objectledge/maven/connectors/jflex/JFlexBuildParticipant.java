@@ -73,7 +73,7 @@ public class JFlexBuildParticipant extends MojoExecutionBuildParticipant {
 		return lexDefinitions;
 	}
 
-	private boolean sourcesChanged(BuildContext buildContext,
+	private static boolean sourcesChanged(BuildContext buildContext,
 			File[] sourceLocations) {
 		for (File sourceLocation : sourceLocations) {
 			if (sourceLocation.isFile()) {

@@ -89,13 +89,13 @@ public class CoralGenerationTest extends AbstractMavenProjectTestCase {
 				interfaceContents.contains("getSecondAttribute()"));
 	}
 
-	private void setContents(IFile file, String contents) throws CoreException,
+	private static void setContents(IFile file, String contents) throws CoreException,
 			UnsupportedEncodingException {
 		file.setContents(new ByteArrayInputStream(contents.getBytes("UTF-8")),
 				IResource.FORCE, monitor);
 	}
 
-	protected String getContents(IFile file) throws IOException, CoreException {
+	private static String getContents(IFile file) throws IOException, CoreException {
 		return FileUtils.fileRead(file.getLocation().toFile(),
 				file.getCharset());
 	}
