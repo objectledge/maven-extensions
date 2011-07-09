@@ -15,9 +15,6 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IncrementalProjectBuilder;
-import org.eclipse.jdt.core.IClasspathEntry;
-import org.eclipse.jdt.core.IJavaProject;
-import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.m2e.core.project.ResolverConfiguration;
 import org.eclipse.m2e.tests.common.AbstractMavenProjectTestCase;
 
@@ -33,9 +30,6 @@ public class CKPackaterProjectTest extends AbstractMavenProjectTestCase {
 		waitForJobsToComplete();
 
 		assertNoErrors(project1);
-
-		IJavaProject javaProject1 = JavaCore.create(project1);
-		IClasspathEntry[] cp1 = javaProject1.getRawClasspath();
 
 		IFile file = project1
 				.getFile("target/generated-resources/ckpackager/basic_sample_compressed.js");
