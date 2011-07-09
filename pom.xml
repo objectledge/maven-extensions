@@ -34,7 +34,8 @@
     <!-- connectors parent module depends target-platform module -->
     <module>connectors/target-platform</module>
     <module>connectors</module>
-    <module>archetypes</module>
+    <!-- archetypes are not ready for 1.0.0 release
+    <module>archetypes</module> -->
   </modules>
 
   <organization>
