@@ -22,6 +22,7 @@ import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.m2e.core.project.ResolverConfiguration;
 import org.eclipse.m2e.tests.common.AbstractMavenProjectTestCase;
 
+@SuppressWarnings("restriction")
 public class JscProjectTest extends AbstractMavenProjectTestCase {
 	public void test_01() throws Exception {
 		ResolverConfiguration configuration = new ResolverConfiguration();
