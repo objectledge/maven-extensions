@@ -61,6 +61,7 @@
 
   <scm>
     <connection>scm:git:git://github.com/objectledge/maven-extensions.git</connection>
+    <developerConnection>scm:git:git://github.com/objectledge/maven-extensions.git</developerConnection>
     <url>https://github.com/objectledge/maven-extensions</url>
   </scm>
   <issueManagement>
@@ -82,8 +83,8 @@
           <configuration>
             <localCheckout>true</localCheckout>
             <pushChanges>false</pushChanges>
-            <suppressCommitBeforeBranch>true</suppressCommitBeforeBranch>
-            <suppressCommitBeforeTag>true</suppressCommitBeforeTag>
+            <addSchema>false</addSchema>
+            <updateBranchVersions>true</updateBranchVersions>
           </configuration>
         </plugin>
         <plugin>
