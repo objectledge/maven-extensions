@@ -19,7 +19,7 @@ import org.eclipse.m2e.core.project.ResolverConfiguration;
 import org.eclipse.m2e.tests.common.AbstractMavenProjectTestCase;
 
 @SuppressWarnings("restriction")
-public class CKPackaterProjectTest extends AbstractMavenProjectTestCase {
+public class CKPackgerTest extends AbstractMavenProjectTestCase {
 	public void test_01() throws Exception {
 		ResolverConfiguration configuration = new ResolverConfiguration();
 		IProject project1 = importProject("projects/testproject-01/pom.xml",

@@ -25,7 +25,7 @@ import org.eclipse.m2e.core.project.ResolverConfiguration;
 import org.eclipse.m2e.tests.common.AbstractMavenProjectTestCase;
 
 @SuppressWarnings("restriction")
-public class ProjectTest extends AbstractMavenProjectTestCase {
+public class CoralGenerationTest extends AbstractMavenProjectTestCase {
 
 	public void testInitialBuild() throws Exception {
 		ResolverConfiguration configuration = new ResolverConfiguration();
