@@ -13,22 +13,22 @@
 
 -->
 <site>
-   <feature url="features/org.objectledge.maven.connectors.javacc_1.0.0.qualifier.jar" id="org.objectledge.maven.connectors.javacc" version="1.0.0.qualifier">
+   <feature url="features/org.objectledge.maven.connectors.javacc_1.0.1.qualifier.jar" id="org.objectledge.maven.connectors.javacc" version="1.0.1.qualifier">
       <category name="org.objectledge.maven.connectors"/>
    </feature>
-   <feature url="features/org.objectledge.maven.connectors.jflex_1.0.0.qualifier.jar" id="org.objectledge.maven.connectors.jflex" version="1.0.0.qualifier">
+   <feature url="features/org.objectledge.maven.connectors.jflex_1.0.1.qualifier.jar" id="org.objectledge.maven.connectors.jflex" version="1.0.1.qualifier">
       <category name="org.objectledge.maven.connectors"/>
    </feature>
-   <feature url="features/org.objectledge.maven.connectors.scm_1.0.0.qualifier.jar" id="org.objectledge.maven.connectors.scm" version="1.0.0.qualifier">
+   <feature url="features/org.objectledge.maven.connectors.scm_1.0.1.qualifier.jar" id="org.objectledge.maven.connectors.scm" version="1.0.1.qualifier">
       <category name="org.objectledge.maven.connectors"/>
    </feature>
-   <feature url="features/org.objectledge.maven.connectors.jsc_1.0.0.qualifier.jar" id="org.objectledge.maven.connectors.jsc" version="1.0.0.qualifier">
+   <feature url="features/org.objectledge.maven.connectors.jsc_1.0.1.qualifier.jar" id="org.objectledge.maven.connectors.jsc" version="1.0.1.qualifier">
       <category name="org.objectledge.maven.connectors"/>
    </feature>
-   <feature url="features/org.objectledge.maven.connectors.ckpackager_1.0.0.qualifier.jar" id="org.objectledge.maven.connectors.ckpackager" version="1.0.0.qualifier">
+   <feature url="features/org.objectledge.maven.connectors.ckpackager_1.0.1.qualifier.jar" id="org.objectledge.maven.connectors.ckpackager" version="1.0.1.qualifier">
       <category name="org.objectledge.maven.connectors"/>
    </feature>
-   <feature url="features/org.objectledge.maven.connectors.coral_1.0.0.qualifier.jar" id="org.objectledge.maven.connectors.coral" version="1.0.0.qualifier">
+   <feature url="features/org.objectledge.maven.connectors.coral_1.0.1.qualifier.jar" id="org.objectledge.maven.connectors.coral" version="1.0.1.qualifier">
       <category name="org.objectledge.maven.connectors"/>
    </feature>
    <category-def name="org.objectledge.maven.connectors" label="objectledge.org m2e connectors"/>
