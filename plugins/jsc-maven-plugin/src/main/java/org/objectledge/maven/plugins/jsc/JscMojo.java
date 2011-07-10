@@ -54,7 +54,7 @@ public class JscMojo extends AbstractMojo {
 	private File sourceDirectory;
 
 	/**
-	 * JavaScript source code extension.
+	 * JavaScript sources file name extension.
 	 * 
 	 * @parameter default-value="js"
 	 * @required
@@ -62,21 +62,21 @@ public class JscMojo extends AbstractMojo {
 	private String sourceExtension;
 
 	/**
-	 * Package of the generated class.
+	 * Java package name of the generated classes.
 	 * 
 	 * @parameter default-value=""
 	 */
 	private String packageName;
 
 	/**
-	 * Superclass of the generated class.
+	 * Superclass of the generated classes.
 	 * 
 	 * @parameter default-value=""
 	 */
 	private String superClassName;
 
 	/**
-	 * Interfaces of the generated class.
+	 * Comma separated list of interfaces to be implemented by the generated classes.
 	 * 
 	 * @parameter default-value=""
 	 */
@@ -99,7 +99,7 @@ public class JscMojo extends AbstractMojo {
 	private int optLevel;
 
 	/**
-	 * JavaScript Language Version Number. 100, 110, 120, 130, 140, 150, 160.
+	 * JavaScript Language version number, allowed values are 100, 110, 120, 130, 140, 150, 160.
 	 * 
 	 * @parameter default-value="160"
 	 * @required
