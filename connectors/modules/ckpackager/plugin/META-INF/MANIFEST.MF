@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: m2e connector for ckpackager-maven-plugin
 Bundle-SymbolicName: org.objectledge.maven.connectors.ckpackager;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 1.1.0.qualifier
 Bundle-Vendor: ObjectLedge.org
 Bundle-RequiredExecutionEnvironment: J2SE-1.5,
  JavaSE-1.6
@@ -14,4 +14,4 @@ Require-Bundle: org.eclipse.core.resources;bundle-version="3.4.0",
  org.slf4j.api;bundle-version="1.6.1"
 Bundle-ClassPath: .,
  jars/js-1.7R2.jar,
- jars/ckpackager-library-1.0.0-SNAPSHOT.jar
+ jars/ckpackager-library-1.1.0-SNAPSHOT.jar

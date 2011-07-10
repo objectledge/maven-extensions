@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: tests for m2e connector for maven-scm-plugin
 Bundle-SymbolicName: org.objectledge.maven.connectors.scm.tests;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 1.1.0.qualifier
 Bundle-Vendor: ObjectLedge.org
 Bundle-RequiredExecutionEnvironment: J2SE-1.5,
  JavaSE-1.6
@@ -14,4 +14,4 @@ Require-Bundle: org.eclipse.core.resources;bundle-version="3.4.0",
  org.eclipse.m2e.maven.runtime;bundle-version="[1.0.0,1.1.0)",
  org.eclipse.m2e.tests.common;bundle-version="[1.0.0,1.1.0)",
  org.junit;bundle-version="3.8.2",
- org.objectledge.maven.connectors.scm;bundle-version="1.0.0"
+ org.objectledge.maven.connectors.scm;bundle-version="1.1.0"
