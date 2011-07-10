@@ -17,7 +17,7 @@
 
   <groupId>org.objectledge.maven.connectors.ckpackager.tests</groupId>
   <artifactId>testproject-01</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.1</version>
   <packaging>war</packaging>
 
   <name>CKPackager connector - test project</name>
@@ -31,7 +31,7 @@
       <plugin>
         <groupId>org.objectledge.maven.plugins</groupId>
         <artifactId>ckpackager-maven-plugin</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.1</version>
         <executions>
           <execution>
             <goals>

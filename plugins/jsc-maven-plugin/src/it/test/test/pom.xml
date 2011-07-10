@@ -19,7 +19,7 @@
   <parent>
     <groupId>org.objectledge.maven.plugins.jsc.test</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1</version>
     <relativePath>..</relativePath>
   </parent>
 
