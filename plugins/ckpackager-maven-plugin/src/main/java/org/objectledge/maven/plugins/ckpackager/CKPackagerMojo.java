@@ -35,7 +35,7 @@ public class CKPackagerMojo extends AbstractMojo {
 	 * Location of ckpackager configuration file.
 	 * 
 	 * @parameter 
-	 *            deafault-value="${project.basedir}/src/main/resources/ckeditor.pack"
+	 *            default-value="${project.basedir}/src/main/resources/ckeditor.pack"
 	 * @required
 	 */
 	private File script;
