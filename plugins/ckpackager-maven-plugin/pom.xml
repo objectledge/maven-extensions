@@ -22,7 +22,7 @@
   </parent>
 
   <artifactId>ckpackager-maven-plugin</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>maven-plugin</packaging>
 
   <name>CKPackager Maven plugin</name>
@@ -38,7 +38,7 @@
     <dependency>
       <groupId>org.objectledge.ckpackager</groupId>
       <artifactId>ckpackager-library</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.1</version>
     </dependency>
     <dependency>
       <groupId>rhino</groupId>

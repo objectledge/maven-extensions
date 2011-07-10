@@ -22,7 +22,7 @@
   </parent>
   
   <artifactId>eclipse-repository</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>eclipse-repository</packaging>
   
   <name>Eclipse repository</name>
