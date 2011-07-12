@@ -79,9 +79,6 @@
         <artifactId>target-platform-configuration</artifactId>
         <version>${tycho-version}</version>
         <configuration>
-          <resolver>p2</resolver>
-          <pomDependencies>consider</pomDependencies>
-          <ignoreTychoRepositories>true</ignoreTychoRepositories>
           <target>
             <groupId>org.objectledge.maven.connectors</groupId>
             <artifactId>target-platform</artifactId>
@@ -122,30 +119,10 @@
       <plugins>
         <plugin>
           <groupId>org.eclipse.tycho</groupId>
-          <artifactId>maven-osgi-lifecycle-plugin</artifactId>
-          <version>${tycho-version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.eclipse.tycho</groupId>
-          <artifactId>tycho-packaging-plugin</artifactId>
-          <version>${tycho-version}</version>
-          <configuration>
-            <!-- workaround for TYCHO-349 or TYCHO-313 -->
-            <strictVersions>false</strictVersions>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.eclipse.tycho</groupId>
           <artifactId>tycho-surefire-plugin</artifactId>
           <version>${tycho-version}</version>
           <configuration>
-            <useUIHarness>true</useUIHarness>
-            <includes>
-              <include>**/*Test.java</include>
-            </includes>
-            <argLine>${tycho.test.jvmArgs}</argLine>
-            <appArgLine>-eclipse.keyring target/keyring -eclipse.password resources/secure-storage-password.txt -pluginCustomization ${basedir}/plugin_customization.ini</appArgLine>            
-            <forkedProcessTimeoutInSeconds>7200</forkedProcessTimeoutInSeconds>
+            <appArgLine>-pluginCustomization ${basedir}/plugin_customization.ini</appArgLine>            
           </configuration>
         </plugin>
         <plugin>
@@ -156,17 +133,6 @@
             <source>1.5</source>
             <target>1.5</target>
           </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.eclipse.tycho</groupId>
-          <artifactId>tycho-p2-plugin</artifactId>
-          <version>${tycho-version}</version>
-        </plugin>
-        <!-- important for self-hosting -->
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>2.4.3</version>
         </plugin>
       </plugins>
     </pluginManagement>
