@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: m2e connector for maven-jflex-plugin
 Bundle-SymbolicName: org.objectledge.maven.connectors.jflex;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 1.1.0.qualifier
 Bundle-Vendor: ObjectLedge.org
 Bundle-RequiredExecutionEnvironment: J2SE-1.5,
  JavaSE-1.6

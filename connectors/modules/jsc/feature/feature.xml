@@ -15,7 +15,7 @@
 <feature
       id="org.objectledge.maven.connectors.jsc"
       label="m2e connector for jsc-maven-plugin"
-      version="1.0.0.qualifier"
+      version="1.1.0.qualifier"
       provider-name="ObjectLedge.org">
 
    <description url="http://objectledge.org/confluence/display/TOOLS/jsc-maven-plugin+connector">

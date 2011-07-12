@@ -60,8 +60,10 @@ public class PackScriptParser {
 			}
 			return writer.toString();
 		} catch (IOException e) {
-			throw new IOException("failed to read script + "
-					+ scriptFile.getAbsolutePath(), e);
+			IOException ee = new IOException("failed to read script + "
+					+ scriptFile.getAbsolutePath());
+			ee.initCause(e);
+			throw ee;
 		} finally {
 			if (reader != null) {
 				reader.close();
@@ -98,8 +100,10 @@ public class PackScriptParser {
 				}
 			}
 		} catch (Exception e) {
-			throw new IOException("failed to parse script + "
-					+ scriptFile.getAbsolutePath(), e);
+			IOException ee = new IOException("failed to parse script + "
+					+ scriptFile.getAbsolutePath());
+			ee.initCause(e);
+			throw ee;
 		} finally {
 			Context.exit();
 		}

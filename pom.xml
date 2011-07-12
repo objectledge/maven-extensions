@@ -11,8 +11,7 @@
         Caltha - Krzewski, Mach, Potempski Sp. J.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   
   <parent>
@@ -23,7 +22,7 @@
   
   <groupId>org.objectledge.maven</groupId>
   <artifactId>parent</artifactId>
-  <version>1-SNAPSHOT</version>
+  <version>2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>ObjectLedge Maven extensions.</name>
@@ -61,6 +60,7 @@
 
   <scm>
     <connection>scm:git:git://github.com/objectledge/maven-extensions.git</connection>
+    <developerConnection>scm:git:git://github.com/objectledge/maven-extensions.git</developerConnection>
     <url>https://github.com/objectledge/maven-extensions</url>
   </scm>
   <issueManagement>
@@ -82,35 +82,9 @@
           <configuration>
             <localCheckout>true</localCheckout>
             <pushChanges>false</pushChanges>
-            <suppressCommitBeforeBranch>true</suppressCommitBeforeBranch>
-            <suppressCommitBeforeTag>true</suppressCommitBeforeTag>
+            <addSchema>false</addSchema>
+            <updateBranchVersions>true</updateBranchVersions>
           </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-source-plugin</artifactId>
-          <version>2.1.2</version>
-          <executions>
-            <execution>
-              <id>attach-sources</id>
-              <goals>
-                <goal>jar</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-javadoc-plugin</artifactId>
-          <version>2.8</version>
-          <executions>
-            <execution>
-              <id>attach-javadocs</id>
-              <goals>
-                <goal>jar</goal>
-              </goals>
-            </execution>
-          </executions>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -141,6 +115,7 @@
             <exclude>**/*~</exclude>
             <exclude>**/target/**</exclude>
             <exclude>**/release.properties</exclude>
+            <exclude>**/*.releaseBackup</exclude>
             <exclude>**/.classpath</exclude>
             <exclude>**/.project</exclude>
             <exclude>**/.settings/**</exclude>
@@ -155,6 +130,7 @@
             <exclude>**/archetype-resources/**</exclude>
             <exclude>**/archetypes/**/goal.txt</exclude>
             <exclude>**/coral/tests/**Resource*.java</exclude>
+            <exclude>**/ckpackager/src/orig/**</exclude>
           </excludes>
         </configuration>
       </plugin>

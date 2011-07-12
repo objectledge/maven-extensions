@@ -24,7 +24,8 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.m2e.core.project.ResolverConfiguration;
 import org.eclipse.m2e.tests.common.AbstractMavenProjectTestCase;
 
-public class ProjectTest extends AbstractMavenProjectTestCase {
+@SuppressWarnings("restriction")
+public class CoralGenerationTest extends AbstractMavenProjectTestCase {
 
 	public void testInitialBuild() throws Exception {
 		ResolverConfiguration configuration = new ResolverConfiguration();
@@ -88,13 +89,13 @@ public class ProjectTest extends AbstractMavenProjectTestCase {
 				interfaceContents.contains("getSecondAttribute()"));
 	}
 
-	private void setContents(IFile file, String contents) throws CoreException,
+	private static void setContents(IFile file, String contents) throws CoreException,
 			UnsupportedEncodingException {
 		file.setContents(new ByteArrayInputStream(contents.getBytes("UTF-8")),
 				IResource.FORCE, monitor);
 	}
 
-	protected String getContents(IFile file) throws IOException, CoreException {
+	private static String getContents(IFile file) throws IOException, CoreException {
 		return FileUtils.fileRead(file.getLocation().toFile(),
 				file.getCharset());
 	}
