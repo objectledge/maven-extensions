@@ -47,7 +47,7 @@ public class JscMojo extends AbstractMojo {
 	 * 
 	 * JavaScript source directory.
 	 * 
-	 * @parameter expression="${basedir}/src/main/js"
+	 * @parameter default-value="${project.basedir}/src/main/js"
 	 * @required
 	 */
 
