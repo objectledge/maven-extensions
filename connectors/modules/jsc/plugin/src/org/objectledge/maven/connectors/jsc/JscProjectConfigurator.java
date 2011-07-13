@@ -17,6 +17,8 @@ import org.apache.maven.plugin.MojoExecution;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.m2e.core.lifecyclemapping.model.IPluginExecutionMetadata;
 import org.eclipse.m2e.core.project.IMavenProjectFacade;
@@ -51,6 +53,15 @@ public class JscProjectConfigurator extends AbstractJavaProjectConfigurator {
 			File alternateOutputDirectory = new File(
 					outputDirectory.getParentFile(), "js-"
 							+ outputDirectory.getName());
+
+			if (!alternateOutputDirectory.exists()) {
+				if (!alternateOutputDirectory.mkdirs()) {
+					String message = "failed to create directory "
+							+ alternateOutputDirectory.getAbsolutePath();
+					throw new CoreException(new Status(IStatus.ERROR,
+							"org.objectledge.maven.connectors.jsc", message));
+				}
+			}
 
 			IPath outputPath = getFullPath(facade, alternateOutputDirectory);
 
