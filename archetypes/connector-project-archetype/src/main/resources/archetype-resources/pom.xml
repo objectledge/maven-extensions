@@ -1,0 +1,61 @@
+#set($symbol_dollar = '$')
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>
+
+  <groupId>${groupId}</groupId>
+  <artifactId>parent</artifactId>
+  <version>${version}</version>
+  <packaging>pom</packaging>
+
+  <name>${name}</name>
+  <description><!-- required for Maven Central --></description>
+  <url><!-- required for Maven Central --></url>
+
+  <modules>
+    <module>target-platform</module>
+    <module>modules</module>
+    <module>eclipse-repository</module>
+  </modules>
+
+  <organization>
+    <name>${organization}</name>
+  </organization>
+  
+  <licenses>
+    <license>
+      <name>EPL-1.0</name>
+      <url>http://www.eclipse.org/legal/epl-v10.html</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <!-- at least 1 required for Maven Central -->
+  </developers>
+
+  <scm>
+    <!-- connection required for Maven Central -->
+  </scm>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <tycho-version>0.12.0</tycho-version>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${symbol_dollar}{tycho-version}</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
