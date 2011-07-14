@@ -14,13 +14,20 @@ package org.objectledge.maven.connectors.jsc;
 import java.io.File;
 import java.util.Set;
 
+import org.apache.maven.model.Plugin;
 import org.apache.maven.plugin.MojoExecution;
 import org.codehaus.plexus.util.Scanner;
 import org.codehaus.plexus.util.xml.Xpp3Dom;
+import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.m2e.core.MavenPlugin;
 import org.eclipse.m2e.core.embedder.IMaven;
+import org.eclipse.m2e.core.internal.MavenPluginActivator;
+import org.eclipse.m2e.core.internal.markers.IMavenMarkerManager;
+import org.eclipse.m2e.core.internal.markers.MavenProblemInfo;
+import org.eclipse.m2e.core.internal.markers.SourceLocation;
+import org.eclipse.m2e.core.internal.markers.SourceLocationHelper;
 import org.eclipse.m2e.core.project.configurator.MojoExecutionBuildParticipant;
 import org.sonatype.plexus.build.incremental.BuildContext;
 
@@ -35,10 +42,16 @@ public class JscBuildParticipant extends MojoExecutionBuildParticipant {
 			throws Exception {
 		IMaven maven = MavenPlugin.getMaven();
 		BuildContext buildContext = getBuildContext();
+		MojoExecution mojoExecution = getMojoExecution();
 
-		// check if any of the input files changed
 		File source = maven.getMojoParameterValue(getSession(),
-				getMojoExecution(), "sourceDirectory", File.class);
+				mojoExecution, "sourceDirectory", File.class);
+		if(!source.exists() || !source.isDirectory()) {
+			// skip non-existent source directories
+			return null;
+		}
+		
+		// check if any of the input files changed
 		Scanner ds = buildContext.newScanner(source); // delta or full scanner
 		ds.scan();
 		String[] includedFiles = ds.getIncludedFiles();
@@ -48,12 +61,12 @@ public class JscBuildParticipant extends MojoExecutionBuildParticipant {
 
 		// override outputDirectory
 		File outputDirectory = maven.getMojoParameterValue(getSession(),
-				getMojoExecution(), "outputDirectory", File.class);
+				mojoExecution, "outputDirectory", File.class);
 		File alternateOutputDirectory = new File(
 				outputDirectory.getParentFile(), "js-"
 						+ outputDirectory.getName());
 
-		Xpp3Dom dom = getMojoExecution().getConfiguration();
+		Xpp3Dom dom = mojoExecution.getConfiguration();
 		Xpp3Dom outputDirectoryConfig = dom.getChild("outputDirectory");
 		outputDirectoryConfig.setValue(alternateOutputDirectory
 				.getAbsolutePath());
