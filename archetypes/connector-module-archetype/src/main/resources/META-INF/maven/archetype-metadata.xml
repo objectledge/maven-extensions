@@ -56,6 +56,7 @@
           </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
+          <directory></directory>
           <includes>
             <include>lifecycle-mapping-metadata.xml</include>
             <include>build.properties</include>
@@ -68,6 +69,7 @@
     <module id="feature" dir="feature" name="feature">
       <fileSets>
         <fileSet filtered="true" encoding="UTF-8">
+          <directory></directory>
           <includes>
             <include>feature.xml</include>
             <include>build.properties</include>
@@ -79,6 +81,7 @@
     <module id="tests" dir="tests" name="tests">
       <fileSets>
         <fileSet filtered="true" encoding="UTF-8">
+          <directory></directory>
           <includes>
             <include>build.properties</include>
             <include>plugin_customization.ini</include>
