@@ -28,6 +28,7 @@
   <packaging>maven-archetype</packaging>
 
   <name>Maven archetype for a m2e connector module.</name>
+  <description>Maven archetype for a m2e connector module.</description>
 
   <build>
     <extensions>
