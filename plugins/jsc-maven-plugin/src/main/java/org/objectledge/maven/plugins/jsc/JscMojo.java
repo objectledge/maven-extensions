@@ -38,7 +38,7 @@ public class JscMojo extends AbstractMojo {
 	/**
 	 * Compiler output directory.
 	 * 
-	 * @parameter expression="${project.build.outputDirectory}"
+	 * @parameter default-value="${project.build.outputDirectory}"
 	 * @required
 	 */
 	private File outputDirectory;
@@ -47,7 +47,7 @@ public class JscMojo extends AbstractMojo {
 	 * 
 	 * JavaScript source directory.
 	 * 
-	 * @parameter default-value="${project.basedir}/src/main/js"
+	 * @parameter default-value="${basedir}/src/main/js"
 	 * @required
 	 */
 
