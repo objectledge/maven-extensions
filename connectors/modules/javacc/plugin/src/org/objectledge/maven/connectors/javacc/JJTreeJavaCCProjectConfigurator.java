@@ -13,31 +13,30 @@ package org.objectledge.maven.connectors.javacc;
 
 import java.io.File;
 
+import org.apache.maven.execution.MavenSession;
 import org.apache.maven.plugin.MojoExecution;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.m2e.core.lifecyclemapping.model.IPluginExecutionMetadata;
 import org.eclipse.m2e.core.project.IMavenProjectFacade;
 import org.eclipse.m2e.core.project.configurator.AbstractBuildParticipant;
-import org.eclipse.m2e.core.project.configurator.ProjectConfigurationRequest;
-import org.eclipse.m2e.jdt.AbstractJavaProjectConfigurator;
 
 public class JJTreeJavaCCProjectConfigurator extends
-		AbstractJavaProjectConfigurator {
+		AbstractJavaCCProjectConfigurator {
 	@Override
 	public AbstractBuildParticipant getBuildParticipant(
 			IMavenProjectFacade projectFacade, MojoExecution execution,
 			IPluginExecutionMetadata executionMetadata) {
-		return new JavaCCBuildParticipant(execution);
+		return new JavaCCBuildParticipant(execution, this);
 	}
 
 	@Override
-	protected File[] getSourceFolders(ProjectConfigurationRequest request,
+	protected File[] getGeneratedSourceFolders(MavenSession mavenSession,
 			MojoExecution mojoExecution) throws CoreException {
 
-		File generated = maven.getMojoParameterValue(request.getMavenSession(),
+		File generated = maven.getMojoParameterValue(mavenSession,
 				mojoExecution, "outputDirectory", File.class);
 
-		File interim = maven.getMojoParameterValue(request.getMavenSession(),
+		File interim = maven.getMojoParameterValue(mavenSession,
 				mojoExecution, "interimDirectory", File.class);
 
 		return new File[] { interim, generated };

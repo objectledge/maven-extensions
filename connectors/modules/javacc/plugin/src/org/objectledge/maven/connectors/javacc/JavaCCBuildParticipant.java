@@ -25,8 +25,12 @@ import org.sonatype.plexus.build.incremental.BuildContext;
 
 public class JavaCCBuildParticipant extends MojoExecutionBuildParticipant {
 
-	public JavaCCBuildParticipant(MojoExecution execution) {
+	private final AbstractJavaCCProjectConfigurator configurator;
+
+	public JavaCCBuildParticipant(MojoExecution execution,
+			AbstractJavaCCProjectConfigurator configurator) {
 		super(execution, true);
+		this.configurator = configurator;
 	}
 
 	@Override
@@ -49,6 +53,11 @@ public class JavaCCBuildParticipant extends MojoExecutionBuildParticipant {
 		Set<IProject> result = super.build(kind, monitor);
 
 		// tell m2e builder to refresh generated files
+		File[] sourceFolders = configurator.getGeneratedSourceFolders(
+				getSession(), getMojoExecution());
+		for (File sourceFolder : sourceFolders) {
+			buildContext.refresh(sourceFolder);
+		}
 		File generated = maven.getMojoParameterValue(getSession(),
 				getMojoExecution(), "outputDirectory", File.class);
 		if (generated != null) {
