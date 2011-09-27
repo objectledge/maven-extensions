@@ -3,7 +3,7 @@
    <!-- use the following template to include your connector's istallable feature in the eclipse repository (update site) -->
    
    <!--
-   <feature url="features/${groupId}.connectorname_1.0.qualifier.jar" id="${groupId}.connectorname" version="1.0.qualifier">
+   <feature url="features/${groupId}.connectorname_1.0.0.qualifier.jar" id="${groupId}.connectorname" version="1.0.0.qualifier">
       <category name="${groupId}"/>
    </feature>
    -->
