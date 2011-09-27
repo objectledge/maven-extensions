@@ -26,6 +26,9 @@ import org.sonatype.plexus.build.incremental.BuildContext;
 
 public class JFlexBuildParticipant extends MojoExecutionBuildParticipant {
 
+	private static final String[] JFLEX_INCLUDES = new String[] { "**/*.lex",
+			"**/*.flex", "**/*.jlex", "**/*.jflex" };
+
 	public JFlexBuildParticipant(MojoExecution execution) {
 		super(execution, true);
 	}
@@ -83,6 +86,7 @@ public class JFlexBuildParticipant extends MojoExecutionBuildParticipant {
 			} else {
 				// delta or full scanner
 				Scanner ds = buildContext.newScanner(sourceLocation);
+				ds.setIncludes(JFLEX_INCLUDES);
 				ds.scan();
 				String[] includedFiles = ds.getIncludedFiles();
 				if (includedFiles != null && includedFiles.length > 0) {
