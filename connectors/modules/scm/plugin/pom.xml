@@ -21,7 +21,7 @@
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>plugin</artifactId>
+  <artifactId>org.objectledge.maven.connectors.scm</artifactId>
   <packaging>eclipse-plugin</packaging>
 
   <name>Maven SCM connector - plugin</name>

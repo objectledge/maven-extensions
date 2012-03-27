@@ -21,7 +21,7 @@
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>feature</artifactId>
+  <artifactId>org.objectledge.maven.connectors.jsc.feature</artifactId>
   <packaging>eclipse-feature</packaging>
 
   <name>Rhino jsc connector - feature</name>

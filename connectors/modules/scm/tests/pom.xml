@@ -21,7 +21,7 @@
     <relativePath>..</relativePath>
   </parent>
  
-  <artifactId>tests</artifactId>
+  <artifactId>org.objectledge.maven.connectors.scm.tests</artifactId>
   <packaging>eclipse-test-plugin</packaging>
 
   <name>Maven SCM connector - tests</name>

@@ -21,7 +21,7 @@
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>plugin</artifactId>
+  <artifactId>org.objectledge.maven.connectors.javacc</artifactId>
   <packaging>eclipse-plugin</packaging>
 
   <name>JavaCC connector - plugin</name>

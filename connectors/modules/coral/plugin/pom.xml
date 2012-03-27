@@ -22,7 +22,7 @@
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>plugin</artifactId>
+  <artifactId>org.objectledge.maven.connectors.coral</artifactId>
   <packaging>eclipse-plugin</packaging>
 
   <name>Objectledge Coral connector - plugin</name>

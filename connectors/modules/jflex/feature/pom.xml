@@ -21,7 +21,7 @@
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>feature</artifactId>
+  <artifactId>org.objectledge.maven.connectors.jflex.feature</artifactId>
   <packaging>eclipse-feature</packaging>
 
   <name>JFlex connector - feature</name>

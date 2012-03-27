@@ -13,7 +13,7 @@
 
 -->
 <feature
-      id="org.objectledge.maven.connectors.jsc"
+      id="org.objectledge.maven.connectors.jsc.feature"
       label="m2e connector for jsc-maven-plugin"
       version="1.1.0.qualifier"
       provider-name="ObjectLedge.org">
