@@ -23,7 +23,7 @@
   <name>Objectledge Coral connector - test project</name>
 
   <properties>
-    <coral-version>1.0.12-SNAPSHOT</coral-version>
+    <coral-version>1.0.13-SNAPSHOT</coral-version>
   </properties>
 
   <repositories>
