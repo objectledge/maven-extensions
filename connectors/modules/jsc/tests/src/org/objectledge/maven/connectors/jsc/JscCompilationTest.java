@@ -40,7 +40,7 @@ public class JscCompilationTest extends AbstractMavenProjectTestCase {
 		IClasspathEntry[] cp1 = javaProject1.getRawClasspath();
 
 		assertEquals(new Path("/testproject-01/target/js-classes"),
-				cp1[3].getPath());
+				cp1[4].getPath());
 
 		IFile file = project1
 				.getFile("target/js-classes/org/objectledge/maven/connectors/jsc/tests/HelloWorld.class");

@@ -41,7 +41,7 @@ public class JFlexProjectTest extends AbstractMavenProjectTestCase {
 
 		assertEquals(
 				new Path("/testproject-01/target/generated-sources/jflex"),
-				cp1[3].getPath());
+				cp1[4].getPath());
 
 		IFile file = project1
 				.getFile("target/generated-sources/jflex/org/objectledge/maven/connectors/jflex/tests/SampleScanner.java");

@@ -39,7 +39,7 @@ public class JavaCCGenerationTest extends AbstractMavenProjectTestCase {
 		IClasspathEntry[] cp1 = javaProject1.getRawClasspath();
 
 		assertEquals(new Path("/javacc-01/target/generated-sources/javacc"),
-				cp1[3].getPath());
+				cp1[4].getPath());
 
 		assertTrue(project1
 				.getFile(
