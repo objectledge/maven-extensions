@@ -59,11 +59,6 @@
       <layout>p2</layout>
       <url>http://download.eclipse.org/releases/helios</url>
     </repository>
-    <repository>
-      <id>swtbot</id>
-      <layout>p2</layout>
-      <url>http://download.eclipse.org/technology/swtbot/helios/dev-build/update-site</url>
-    </repository>    
   </repositories>
 
   <build>
