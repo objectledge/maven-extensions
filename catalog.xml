@@ -1,0 +1,135 @@
+<catalog>
+  <catalogItems>
+    <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=351636 -->
+    <catalogItem>
+      <categoryId>org.eclipse.m2e.discovery.category.lifecycles</categoryId>
+      <description>m2e connector for JavaCC Maven plugin,
+http://mojo.codehaus.org/javacc-maven-plugin
+      </description>
+      <groupId>lifecycles</groupId>
+      <id>org.eclipse.m2e.discovery.lifecycles.org.objectledge.maven.connectors.javacc</id>
+      <kind>lifecycles</kind>
+      <license>EPL v1.0</license>
+      <name>m2e connector for javacc-maven-plugin</name>
+      <provider>Caltha - Krzewski, Mach, Potempski Sp. J.</provider>
+      <p2>
+        <repositoryUrl>http://objectledge.github.com/maven-extensions/connectors/updates/milestones/</repositoryUrl>
+        <iuId>org.objectledge.maven.connectors.javacc.feature.group</iuId>
+        <iuVersion>1.0.0.201107091852</iuVersion>
+        <lifecycleMappingIU>
+          <iuId>org.objectledge.maven.connectors.javacc</iuId>
+        </lifecycleMappingIU>
+      </p2>
+      <overview>
+        <summary>m2e connector for javacc-maven-plugin</summary>
+        <url>https://github.com/objectledge/maven-extensions</url>
+      </overview>
+    </catalogItem>
+
+    <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=351637 -->
+    <catalogItem>
+      <categoryId>org.eclipse.m2e.discovery.category.lifecycles</categoryId>
+      <description>m2e connector for JFlex Maven plugin,
+http://jflex.de / http://jflex.sourceforge.net/maven-jflex-plugin
+      </description>
+      <groupId>lifecycles</groupId>
+      <id>org.eclipse.m2e.discovery.lifecycles.org.objectledge.maven.connectors.jflex</id>
+      <kind>lifecycles</kind>
+      <license>EPL v1.0</license>
+      <name>m2e connector for maven-jflex-plugin</name>
+      <provider>Caltha - Krzewski, Mach, Potempski Sp. J.</provider>
+      <p2>
+        <repositoryUrl>http://objectledge.github.com/maven-extensions/connectors/updates/milestones/</repositoryUrl>
+        <iuId>org.objectledge.maven.connectors.jflex.feature.group</iuId>
+        <iuVersion>1.0.0.201107091852</iuVersion>
+        <lifecycleMappingIU>
+          <iuId>org.objectledge.maven.connectors.jflex</iuId>
+        </lifecycleMappingIU>
+      </p2>
+      <overview>
+        <summary>m2e connector for maven-jflex-plugin</summary>
+        <url>https://github.com/objectledge/maven-extensions</url>
+      </overview>
+    </catalogItem>
+
+    <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=351638 -->
+    <catalogItem>
+      <categoryId>org.eclipse.m2e.discovery.category.lifecycles</categoryId>
+      <description>m2e connector for maven-scm-plugin,
+http://maven.apache.org/scm/maven-scm-plugin
+Supports bootstrap, checkout and update goals.
+      </description>
+      <groupId>lifecycles</groupId>
+      <id>org.eclipse.m2e.discovery.lifecycles.org.objectledge.maven.connectors.scm</id>
+      <kind>lifecycles</kind>
+      <license>EPL v1.0</license>
+      <name>m2e connector for maven-scm-plugin</name>
+      <provider>Caltha - Krzewski, Mach, Potempski Sp. J.</provider>
+      <p2>
+        <repositoryUrl>http://objectledge.github.com/maven-extensions/connectors/updates/milestones/</repositoryUrl>
+        <iuId>org.objectledge.maven.connectors.scm.feature.group</iuId>
+        <iuVersion>1.0.0.201107091852</iuVersion>
+        <lifecycleMappingIU>
+          <iuId>org.objectledge.maven.connectors.scm</iuId>
+        </lifecycleMappingIU>
+      </p2>
+      <overview>
+        <summary>m2e connector for maven-scm-plugin</summary>
+        <url>https://github.com/objectledge/maven-extensions</url>
+      </overview>
+    </catalogItem>
+
+    <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=351639 -->
+    <catalogItem>
+      <categoryId>org.eclipse.m2e.discovery.category.lifecycles</categoryId>
+      <description>m2e connector for Rhino JS compiler plugin,
+http://objectledge.org/confluence/display/TOOLS/jsc-maven-plugin
+      </description>
+      <groupId>lifecycles</groupId>
+      <id>org.eclipse.m2e.discovery.lifecycles.org.objectledge.maven.connectors.jsc</id>
+      <kind>lifecycles</kind>
+      <license>EPL v1.0</license>
+      <name>m2e connector for jsc-maven-plugin</name>
+      <provider>Caltha - Krzewski, Mach, Potempski Sp. J.</provider>
+      <p2>
+        <repositoryUrl>http://objectledge.github.com/maven-extensions/connectors/updates/milestones/</repositoryUrl>
+        <iuId>org.objectledge.maven.connectors.jsc.feature.group</iuId>
+        <iuVersion>1.0.0.201107091852</iuVersion>
+        <lifecycleMappingIU>
+          <iuId>org.objectledge.maven.connectors.jsc</iuId>
+        </lifecycleMappingIU>
+      </p2>
+      <overview>
+        <summary>m2e connector for jsc-maven-plugin</summary>
+        <url>https://github.com/objectledge/maven-extensions</url>
+      </overview>
+    </catalogItem>
+
+    <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=351640 -->
+    <catalogItem>
+      <categoryId>org.eclipse.m2e.discovery.category.lifecycles</categoryId>
+      <description>m2e connector for CKPackager plugin,
+http://docs.cksource.com/CKEditor_3.x/Developers_Guide/CKPackager, 
+http://objectledge.org/confluence/display/TOOLS/ckpackager-maven-plugin
+      </description>
+      <groupId>lifecycles</groupId>
+      <id>org.eclipse.m2e.discovery.lifecycles.org.objectledge.maven.connectors.ckpackager</id>
+      <kind>lifecycles</kind>
+      <license>EPL v1.0</license>
+      <name>m2e connector for ckpackager-maven-plugin</name>
+      <provider>Caltha - Krzewski, Mach, Potempski Sp. J.</provider>
+      <p2>
+        <repositoryUrl>http://objectledge.github.com/maven-extensions/connectors/updates/milestones/</repositoryUrl>
+        <iuId>org.objectledge.maven.connectors.ckpackager.feature.group</iuId>
+        <iuVersion>1.0.0.201107091852</iuVersion>
+        <lifecycleMappingIU>
+          <iuId>org.objectledge.maven.connectors.ckpackager</iuId>
+        </lifecycleMappingIU>
+      </p2>
+      <overview>
+        <summary>m2e connector for ckpackager-maven-plugin</summary>
+        <url>https://github.com/objectledge/maven-extensions</url>
+      </overview>
+    </catalogItem>
+  </catalogItems>
+</catalog>
