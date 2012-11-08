@@ -15,7 +15,7 @@
 <feature
       id="org.objectledge.maven.connectors.jflex.feature"
       label="m2e connector maven-jflex-plugin"
-      version="1.1.0.qualifier"
+      version="1.2.0.qualifier"
       provider-name="ObjectLedge.org">
 
    <description url="http://objectledge.org/confluence/display/TOOLS/maven-jflex-plugin+connector">
