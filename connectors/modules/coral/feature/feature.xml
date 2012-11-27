@@ -15,7 +15,7 @@
 <feature
       id="org.objectledge.maven.connectors.coral.feature"
       label="m2e connector for coral-maven2-plugin"
-      version="1.1.0.qualifier"
+      version="1.2.0.qualifier"
       provider-name="Objectedge.org">
 
    <description url="http://objectledge.org/confluence/display/TOOLS/coral-maven2-plugin+connector">
